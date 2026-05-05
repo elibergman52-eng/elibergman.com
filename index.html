@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing and GTM Consulting for Water Technology Companies | Eli Bergman</title>
+  <meta name="description" content="Engineer-led marketing and go-to-market consulting for water technology companies selling to industrial and consumer markets. Eli Bergman, water engineer turned marketing consultant." />
+  <meta property="og:title" content="Marketing and GTM Consulting for Water Technology Companies | Eli Bergman" />
+  <meta property="og:description" content="Engineer-led marketing and go-to-market consulting for water technology companies selling to industrial and consumer markets." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elibergman.com" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'] },
+          colors: {
+            'xylem-blue':   '#007da3',
+            'xylem-dark':   '#003e51',
+            'xylem-mid':    '#005f7d',
+            'xylem-light':  '#e8f5f9',
+            'xylem-orange': '#e85d26',
+            'xylem-gray':   '#545454',
+            'xylem-gray2':  '#f5f5f5',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      color: #545454;
+      line-height: 1.6;
+      margin: 0; padding: 0;
+    }
+    h1, h2, h3, h4 { color: #003e51; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+
+    /* Buttons */
+    .btn-orange {
+      display: inline-block;
+      background: #e85d26;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 14px 32px;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .btn-orange:hover { background: #c94d1d; transform: translateY(-1px); }
+    .btn-orange:active { transform: translateY(0); }
+
+    .btn-outline-white {
+      display: inline-block;
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 13px 32px;
+      border-radius: 9999px;
+      border: 2px solid rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: #fff; transform: translateY(-1px); }
+
+    .btn-blue {
+      display: inline-block;
+      background: #007da3;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 14px 32px;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .btn-blue:hover { background: #005f7d; transform: translateY(-1px); }
+
+    /* Nav */
+    .nav-wrap {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(0,62,81,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { color: #fff; font-weight: 700; font-size: 1.1rem; text-decoration: none; letter-spacing: -0.01em; }
+    .nav-logo:hover { color: #67dfff; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-link { color: rgba(255,255,255,0.8); font-size: 0.9375rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .nav-link:hover { color: #fff; }
+    .nav-cta { display: inline-block; background: #e85d26; color: #fff; font-weight: 600; font-size: 0.875rem; padding: 9px 22px; border-radius: 9999px; text-decoration: none; transition: background 0.2s ease; }
+    .nav-cta:hover { background: #c94d1d; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: #fff; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(140deg, #003e51 0%, #007da3 65%, #00a8cc 100%);
+      padding-top: 68px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner { max-width: 1200px; margin: 0 auto; padding: 80px 24px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .hero-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #67dfff; margin-bottom: 20px; }
+    .hero h1 { color: #fff; font-size: clamp(2rem, 4vw, 2.9rem); font-weight: 700; line-height: 1.1; margin: 0 0 20px; letter-spacing: -0.02em; }
+    .hero p { color: rgba(255,255,255,0.82); font-size: 1.0625rem; line-height: 1.75; margin: 0 0 36px; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-img { position: relative; }
+    .hero-img img {
+      width: 100%;
+      max-width: 480px;
+      height: 420px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 16px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+      display: block;
+      margin-left: auto;
+    }
+    .hero-img-overlay {
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      background: linear-gradient(to top, rgba(0,62,81,0.5) 0%, transparent 60%);
+    }
+
+    /* Wave dividers */
+    .wave { line-height: 0; display: block; }
+    .wave svg { display: block; width: 100%; }
+
+    /* Section base */
+    .section { padding: 80px 24px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #007da3; margin-bottom: 12px; }
+    .section-h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: #003e51; margin: 0 0 16px; letter-spacing: -0.02em; line-height: 1.15; }
+
+    /* Two-col layout */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .two-col-img img { width: 100%; height: 360px; object-fit: cover; border-radius: 14px; box-shadow: 0 8px 40px rgba(0,62,81,0.15); }
+
+    /* Who I work with cards */
+    .fit-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .fit-card { border-radius: 14px; padding: 36px; }
+    .fit-card--yes { background: #e8f5f9; border: 1.5px solid #b3dde9; }
+    .fit-card--no  { background: #f9f9f9; border: 1.5px solid #e0e0e0; }
+    .fit-card-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
+    .fit-card--yes .fit-card-label { color: #007da3; }
+    .fit-card--no  .fit-card-label { color: #a8a8a8; }
+    .fit-card ul { list-style: none; padding: 0; margin: 0; }
+    .fit-card ul li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 14px; font-size: 0.9375rem; line-height: 1.6; color: #545454; }
+    .fit-card ul li:last-child { margin-bottom: 0; }
+    .check { flex-shrink: 0; margin-top: 3px; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .check-yes { background: #007da3; }
+    .check-no  { background: #dbdbdb; }
+
+    /* Service cards */
+    .service-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .service-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      padding: 36px 32px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .service-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
+    .service-card h3 { color: #fff; font-size: 1.2rem; margin: 0 0 10px; }
+    .service-card p { color: rgba(255,255,255,0.68); font-size: 0.9rem; line-height: 1.65; margin: 0 0 20px; }
+    .service-card ul { list-style: none; padding: 0; margin: 0 0 24px; }
+    .service-card ul li { color: rgba(255,255,255,0.75); font-size: 0.875rem; line-height: 1.6; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; gap: 8px; }
+    .service-card ul li::before { content: '+'; color: #67dfff; font-weight: 700; flex-shrink: 0; }
+    .service-card a { color: #67dfff; font-size: 0.875rem; font-weight: 600; text-decoration: none; }
+    .service-card a:hover { color: #fff; }
+
+    /* Why section */
+    .why-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+    .why-item h3 { font-size: 1.1rem; color: #003e51; margin: 0 0 10px; }
+    .why-item p { font-size: 0.9375rem; line-height: 1.75; margin: 0; }
+
+    /* Proof placeholder */
+    .proof-placeholder { border: 2px dashed #dbdbdb; border-radius: 14px; padding: 64px; text-align: center; color: #a8a8a8; font-size: 0.9rem; }
+
+    /* About preview */
+    .about-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 32px rgba(0,62,81,0.18); display: block; }
+
+    /* Dark CTA section */
+    .dark-section { background: linear-gradient(140deg, #003e51 0%, #005f7d 100%); position: relative; overflow: hidden; }
+    .dark-section-inner { max-width: 700px; margin: 0 auto; text-align: center; padding: 96px 24px; }
+    .dark-section h2 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 16px; }
+    .dark-section p { color: rgba(255,255,255,0.8); font-size: 1.0625rem; line-height: 1.75; margin: 0 0 40px; }
+
+    /* Footer */
+    .footer { background: #003e51; color: rgba(255,255,255,0.65); padding: 48px 24px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-brand { font-weight: 700; color: #fff; font-size: 1rem; }
+    .footer-meta { font-size: 0.8rem; margin-top: 4px; }
+    .footer-links { display: flex; gap: 24px; align-items: center; }
+    .footer-links a { color: rgba(255,255,255,0.7); font-size: 0.9rem; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-note { font-size: 0.78rem; color: rgba(255,255,255,0.4); max-width: 200px; text-align: right; line-height: 1.5; }
+
+    /* Fade-in */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-delay-1 { transition-delay: 0.1s; }
+    .fade-delay-2 { transition-delay: 0.2s; }
+
+    /* Mobile menu */
+    #mobile-menu { display: none; background: #003e51; border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 24px; }
+    #mobile-menu.open { display: block; }
+    #mobile-menu a { display: block; color: rgba(255,255,255,0.85); font-size: 1rem; font-weight: 500; text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    #mobile-menu a:last-child { border-bottom: none; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; padding: 60px 24px 40px; }
+      .hero-img { display: none; }
+      .two-col { grid-template-columns: 1fr; gap: 36px; }
+      .fit-cards { grid-template-columns: 1fr; }
+      .service-cards { grid-template-columns: 1fr; }
+      .why-cols { grid-template-columns: 1fr; gap: 32px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-note { text-align: left; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Bergman Water Marketing",
+    "description": "Engineer-led marketing and go-to-market consulting for water technology companies.",
+    "founder": { "@type": "Person", "name": "Eli Bergman" },
+    "url": "https://elibergman.com",
+    "email": "eli@elibergman.com"
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="nav-wrap">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Eli Bergman</a>
+    <nav class="nav-links">
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-cta">Book a Call</a>
+    </nav>
+    <button class="hamburger" id="menu-toggle" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="13" x2="21" y2="13"/><line x1="3" y1="19" x2="21" y2="19"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" style="color:#67dfff; font-weight:600;">Book a Call</a>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-label">Water Technology Marketing</p>
+      <h1>Most water technology companies have great technology and weak go-to-market.</h1>
+      <p>I help water tech founders selling to industries and consumers turn that around. Sharper positioning, better marketing, more pipeline. Built by an engineer who knows the industry from the inside.</p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn-orange">Book a 30-Minute Intro Call</a>
+        <a href="services.html" class="btn-outline-white">See How I Work</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="assets/photos/1716468129292.jpeg" alt="Eli Bergman at Aquaculture Philippines 2024" />
+      <div class="hero-img-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Wave bottom: teal to white -->
+  <div class="wave">
+    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:90px;">
+      <path d="M0,45 C180,90 360,0 540,45 C720,90 900,0 1080,45 C1260,90 1350,20 1440,45 L1440,90 L0,90 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- THE PROBLEM -->
+<section class="section" style="padding-top: 60px;">
+  <div class="section-inner">
+    <div class="two-col fade-in">
+      <div class="two-col-img">
+        <img src="assets/photos/1765455040310.jpeg" alt="Eli Bergman in conversation at a waterway site" style="object-position: center;" />
+      </div>
+      <div>
+        <p class="section-label">The problem</p>
+        <h2 class="section-h2">The pattern is familiar.</h2>
+        <p style="margin-bottom:18px; font-size:1rem; line-height:1.8;">
+          You built something real. The technology works. Early customers are happy. But growth is slow, and the marketing isn't pulling its weight.
+        </p>
+        <p style="margin-bottom:18px; font-size:1rem; line-height:1.8;">
+          The website reads like a spec sheet. The messaging makes sense to engineers and no one else. The sales cycle drags because the wrong people are reading the wrong content. You've tried agencies, but they don't understand water. You've tried freelancers, but they need too much hand-holding.
+        </p>
+        <p style="font-size:1.0625rem; font-weight:600; color:#003e51; line-height:1.6;">
+          That's the gap I close.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHO I WORK WITH -->
+<section class="section" style="background: #f5f5f5; padding: 64px 24px;">
+  <div class="section-inner">
+    <p class="section-label fade-in">Fit</p>
+    <h2 class="section-h2 fade-in" style="margin-bottom:40px;">Who I work with.</h2>
+    <div class="fit-cards">
+      <div class="fit-card fit-card--yes fade-in fade-delay-1">
+        <p class="fit-card-label">Built for</p>
+        <ul>
+          <li>
+            <span class="check check-yes"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Water technology companies selling to <strong>industrial buyers</strong>: food and beverage, manufacturing, agriculture, commercial real estate, hospitality.
+          </li>
+          <li>
+            <span class="check check-yes"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Companies selling to <strong>consumers and property owners</strong>: residential filtration, septic, water quality, smart water tech.
+          </li>
+          <li>
+            <span class="check check-yes"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Founders and growth leaders who want a <strong>marketing partner who actually understands the technology and the buyer</strong>.
+          </li>
+        </ul>
+      </div>
+      <div class="fit-card fit-card--no fade-in fade-delay-2">
+        <p class="fit-card-label">Not for</p>
+        <ul>
+          <li>
+            <span class="check check-no"><svg width="10" height="2" viewBox="0 0 10 2" fill="none"><line x1="1" y1="1" x2="9" y2="1" stroke="#a8a8a8" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <span><strong style="color:#545454;">Utility-targeted vendors.</strong> That market is won through RFPs, references, and long-cycle relationships, not marketing.</span>
+          </li>
+          <li>
+            <span class="check check-no"><svg width="10" height="2" viewBox="0 0 10 2" fill="none"><line x1="1" y1="1" x2="9" y2="1" stroke="#a8a8a8" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <span><strong style="color:#545454;">Companies looking for a generic agency.</strong> I work with a small number of clients in depth.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave: white to dark for services -->
+<div class="wave" style="background:#f5f5f5;">
+  <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:80px;">
+    <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,40 L1440,80 L0,80 Z" fill="#003e51"/>
+  </svg>
+</div>
+
+
+<!-- SERVICES -->
+<section style="background: linear-gradient(180deg, #003e51 0%, #005f7d 100%); padding: 64px 24px 80px;">
+  <div class="section-inner">
+    <p class="section-label fade-in" style="color: #67dfff;">Services</p>
+    <h2 class="section-h2 fade-in" style="color: #fff; margin-bottom: 40px;">How I help.</h2>
+    <div class="service-cards">
+      <div class="service-card fade-in">
+        <h3>Marketing Foundation Build</h3>
+        <p>A complete reset of how your company looks, sounds, and shows up.</p>
+        <ul>
+          <li>ICP definition and buyer personas</li>
+          <li>Positioning and messaging framework</li>
+          <li>Website rebuild with conversion-focused copy</li>
+          <li>Cornerstone content and brand assets</li>
+        </ul>
+        <a href="services.html#foundation">Learn More &rarr;</a>
+      </div>
+      <div class="service-card fade-in fade-delay-1">
+        <h3>Demand Generation Sprint</h3>
+        <p>A focused engagement to put your company in front of the right buyers, consistently.</p>
+        <ul>
+          <li>Target list building and audience definition</li>
+          <li>Cold email infrastructure and outbound sequences</li>
+          <li>Landing pages built to convert</li>
+          <li>Optional paid campaigns on LinkedIn or Meta</li>
+        </ul>
+        <a href="services.html#demand-gen">Learn More &rarr;</a>
+      </div>
+      <div class="service-card fade-in fade-delay-2">
+        <h3>Fractional Marketing Lead</h3>
+        <p>Ongoing marketing leadership for companies not ready to hire in-house.</p>
+        <ul>
+          <li>Weekly strategy and execution</li>
+          <li>Content production and campaign management</li>
+          <li>Marketing automation and AI workflow buildout</li>
+          <li>Quarterly strategy reviews</li>
+        </ul>
+        <a href="services.html#fractional">Learn More &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave: dark to white -->
+<div class="wave" style="background: #005f7d;">
+  <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:80px;">
+    <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1380,60 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+  </svg>
+</div>
+
+
+<!-- WHY ENGINEER-LED -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label fade-in">The advantage</p>
+    <h2 class="section-h2 fade-in" style="margin-bottom: 48px;">Why this works.</h2>
+    <div class="why-cols">
+      <div class="why-item fade-in">
+        <h3>I speak the buyer's language.</h3>
+        <p>I've sat across the desk from operators, engineers, and industrial buyers. I know what they read, what they trust, and what makes them tune out in the first ten seconds.</p>
+      </div>
+      <div class="why-item fade-in fade-delay-1">
+        <h3>I translate technical into commercial.</h3>
+        <p>Most marketers can't explain why your technology matters. I can, in language non-technical decision makers act on. No jargon. No dumbing down. Just clarity.</p>
+      </div>
+      <div class="why-item fade-in fade-delay-2">
+        <h3>I think like an operator.</h3>
+        <p>Every recommendation ties back to pipeline, revenue, and ROI. No marketing for marketing's sake. If it doesn't move a number, it doesn't make the list.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SELECTED WORK placeholder -->
+<section class="section" style="background: #f5f5f5; padding: 64px 24px;">
+  <div class="section-inner">
+    <p class="section-label fade-in">Work</p>
+    <h2 class="section-h2 fade-in" style="margin-bottom: 32px;">Selected work.</h2>
+    <!-- Logos / testimonials / case studies go here -->
+    <div class="proof-placeholder fade-in">Case studies and client work coming soon.</div>
+  </div>
+</section>
+
+<!-- Wave: gray to dark for about-preview bg -->
+<div class="wave" style="background: #f5f5f5;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
+    <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+  </svg>
+</div>
+
+
+<!-- ABOUT PREVIEW -->
+<section class="section" style="padding-top: 0;">
+  <div class="section-inner">
+    <div class="two-col fade-in" style="gap: 56px;">
+      <div style="display:flex; justify-content:center; align-items:center;">
+        <div style="position:relative;">
+          <img src="assets/photos/20251111_093441.jpg" alt="Eli Bergman at WaterEdge.IL conference" class="about-photo" />
+          <div style="position:absolute; inset:-8px; border-radius:50%; border:2px solid #007da3; opacity:0.25; pointer-events:none;"></div>
+        </div>
+      </div>
+      <div>
+        <p class="section-label">About</p>
+        <h2 class="section-h2">About Eli.</h2>
+        <p style="font-size:1rem; line-height:1.8; margin-bottom:16px;">
+          I'm a water and wastewater engineer turned marketing consultant. After years designing treatment systems and leading implementations across the US and Israel, I noticed the same pattern across the industry: great technology, weak marketing.
+        </p>
+        <p style="font-size:1rem; line-height:1.8; margin-bottom:28px;">
+          I started this practice to fix that for the companies worth fixing.
+        </p>
+        <a href="about.html" class="btn-blue">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<div class="wave" style="background: #fff;">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px;">
+    <path d="M0,35 C360,70 720,0 1080,35 C1260,52 1380,15 1440,35 L1440,70 L0,70 Z" fill="#003e51"/>
+  </svg>
+</div>
+<section class="dark-section">
+  <div class="dark-section-inner fade-in">
+    <h2>Let's talk.</h2>
+    <p>30 minutes. No pitch deck, no pressure. We'll figure out if there's a fit.</p>
+    <a href="contact.html" class="btn-orange">Book a 30-Minute Intro Call</a>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Eli Bergman</div>
+      <div class="footer-meta">&copy; 2025 Bergman Water Marketing</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/eli-bergman/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:eli@elibergman.com">eli@elibergman.com</a>
+    </div>
+    <p class="footer-note">I don't work with utility-targeted vendors.</p>
+  </div>
+</footer>
+
+
+<script>
+  // Mobile menu
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => menu.classList.toggle('open'));
+
+  // Fade-in on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

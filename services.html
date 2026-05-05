@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Bergman Water Marketing</title>
+  <meta name="description" content="Three ways Eli Bergman helps water technology companies grow: Marketing Foundation Build, Demand Generation Sprint, and Fractional Marketing Lead." />
+  <meta property="og:title" content="Services | Bergman Water Marketing" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elibergman.com/services" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #545454; line-height: 1.6; margin: 0; padding: 0; }
+    h1, h2, h3, h4 { color: #003e51; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+
+    .btn-orange { display:inline-block; background:#e85d26; color:#fff; font-weight:600; font-size:0.9375rem; padding:14px 32px; border-radius:9999px; text-decoration:none; transition:background 0.2s ease,transform 0.15s ease; }
+    .btn-orange:hover { background:#c94d1d; transform:translateY(-1px); }
+
+    .nav-wrap { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(0,62,81,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.08); }
+    .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; height:68px; display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { color:#fff; font-weight:700; font-size:1.1rem; text-decoration:none; letter-spacing:-0.01em; }
+    .nav-logo:hover { color:#67dfff; }
+    .nav-links { display:flex; align-items:center; gap:32px; }
+    .nav-link { color:rgba(255,255,255,0.8); font-size:0.9375rem; font-weight:500; text-decoration:none; transition:color 0.2s; }
+    .nav-link:hover,.nav-link.active { color:#fff; }
+    .nav-cta { display:inline-block; background:#e85d26; color:#fff; font-weight:600; font-size:0.875rem; padding:9px 22px; border-radius:9999px; text-decoration:none; transition:background 0.2s ease; }
+    .nav-cta:hover { background:#c94d1d; }
+    .hamburger { display:none; background:none; border:none; cursor:pointer; padding:8px; color:#fff; }
+
+    #mobile-menu { display:none; background:#003e51; border-top:1px solid rgba(255,255,255,0.1); padding:20px 24px; }
+    #mobile-menu.open { display:block; }
+    #mobile-menu a { display:block; color:rgba(255,255,255,0.85); font-size:1rem; font-weight:500; text-decoration:none; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
+
+    /* Page hero */
+    .page-hero { background:linear-gradient(140deg,#003e51 0%,#007da3 65%,#00a8cc 100%); padding:120px 24px 0; position:relative; overflow:hidden; }
+    .page-hero-inner { max-width:800px; margin:0 auto; text-align:center; padding-bottom:60px; }
+    .page-hero-label { font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#67dfff; margin-bottom:16px; }
+    .page-hero h1 { color:#fff; font-size:clamp(1.8rem,4vw,3rem); font-weight:700; line-height:1.1; margin:0 0 16px; letter-spacing:-0.02em; }
+    .page-hero p { color:rgba(255,255,255,0.82); font-size:1.0625rem; line-height:1.75; margin:0; max-width:580px; margin:0 auto; }
+    .wave { line-height:0; display:block; }
+    .wave svg { display:block; width:100%; }
+
+    /* Anchor nav */
+    .anchor-nav { background:#fff; border-bottom:1px solid #dbdbdb; position:sticky; top:68px; z-index:50; }
+    .anchor-nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; gap:32px; overflow-x:auto; }
+    .anchor-nav a { color:#545454; font-size:0.875rem; font-weight:500; text-decoration:none; padding:14px 0; border-bottom:2px solid transparent; white-space:nowrap; transition:color 0.2s,border-color 0.2s; }
+    .anchor-nav a:hover { color:#007da3; border-color:#007da3; }
+
+    /* Service section */
+    .svc-section { padding:80px 24px; }
+    .svc-inner { max-width:1200px; margin:0 auto; }
+    .svc-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start; }
+    .svc-tag { display:inline-block; background:#e8f5f9; color:#005f7d; font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:5px 14px; border-radius:9999px; margin-bottom:20px; }
+    .svc-tag-dark { background:rgba(255,255,255,0.12); color:#67dfff; }
+    .svc-h2 { font-size:clamp(1.5rem,3vw,2.2rem); font-weight:700; color:#003e51; margin:0 0 12px; letter-spacing:-0.02em; line-height:1.15; }
+    .svc-h2-white { color:#fff; }
+    .svc-italic { font-size:1.0625rem; font-style:italic; color:#007da3; margin-bottom:16px; }
+    .svc-italic-white { color:rgba(255,255,255,0.65); }
+    .svc-body p { font-size:1rem; line-height:1.8; color:#545454; margin-bottom:14px; }
+    .svc-body-white p { color:rgba(255,255,255,0.78); }
+    .svc-who-label { font-size:0.8rem; font-weight:700; color:#003e51; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px; }
+    .svc-who-label-white { color:rgba(255,255,255,0.5); }
+    .svc-who-text { font-size:0.9375rem; line-height:1.7; color:#545454; }
+    .svc-who-text-white { color:rgba(255,255,255,0.75); }
+
+    /* Included box */
+    .included-box { background:#f5f5f5; border:1px solid #e0e0e0; border-radius:14px; padding:36px; }
+    .included-box-dark { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); }
+    .included-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#007da3; margin-bottom:18px; }
+    .included-label-light { color:#67dfff; }
+    .included-box ul { list-style:none; padding:0; margin:0 0 28px; }
+    .included-box ul li { display:flex; gap:10px; align-items:flex-start; padding:8px 0; border-bottom:1px solid rgba(0,0,0,0.06); font-size:0.9375rem; line-height:1.6; color:#545454; }
+    .included-box ul li:last-child { border-bottom:none; }
+    .included-box-dark ul li { border-color:rgba(255,255,255,0.08); color:rgba(255,255,255,0.8); }
+    .bullet { flex-shrink:0; width:6px; height:6px; border-radius:50%; background:#007da3; margin-top:8px; }
+    .bullet-light { background:#67dfff; }
+
+    /* Dark svc section */
+    .svc-dark { background:linear-gradient(140deg,#003e51 0%,#005f7d 100%); }
+
+    /* Bottom CTA */
+    .bottom-cta { background:linear-gradient(140deg,#003e51 0%,#005f7d 100%); padding:96px 24px; text-align:center; }
+    .bottom-cta h2 { color:#fff; font-size:clamp(1.6rem,3.5vw,2.4rem); margin:0 0 14px; }
+    .bottom-cta p { color:rgba(255,255,255,0.8); font-size:1.0625rem; line-height:1.75; margin:0 0 36px; max-width:520px; margin-left:auto; margin-right:auto; }
+
+    /* Footer */
+    .footer { background:#003e51; color:rgba(255,255,255,0.65); padding:48px 24px; }
+    .footer-inner { max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px; }
+    .footer-brand { font-weight:700; color:#fff; font-size:1rem; }
+    .footer-meta { font-size:0.8rem; margin-top:4px; }
+    .footer-links { display:flex; gap:24px; align-items:center; }
+    .footer-links a { color:rgba(255,255,255,0.7); font-size:0.9rem; text-decoration:none; transition:color 0.2s; }
+    .footer-links a:hover { color:#fff; }
+    .footer-note { font-size:0.78rem; color:rgba(255,255,255,0.4); max-width:200px; text-align:right; line-height:1.5; }
+
+    .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.65s ease,transform 0.65s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+    .fade-delay-1 { transition-delay:0.12s; }
+
+    @media (max-width:768px) {
+      .nav-links { display:none; }
+      .hamburger { display:block; }
+      .svc-grid { grid-template-columns:1fr; gap:36px; }
+      .footer-inner { flex-direction:column; align-items:flex-start; }
+      .footer-note { text-align:left; }
+    }
+  </style>
+</head>
+
+<body>
+<header class="nav-wrap">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Eli Bergman</a>
+    <nav class="nav-links">
+      <a href="services.html" class="nav-link active">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-cta">Book a Call</a>
+    </nav>
+    <button class="hamburger" id="menu-toggle" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="13" x2="21" y2="13"/><line x1="3" y1="19" x2="21" y2="19"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu">
+    <a href="services.html" style="color:#67dfff;">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" style="color:#67dfff;font-weight:600;">Book a Call</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-label">Services</p>
+    <h1>Three ways I help water tech companies grow.</h1>
+    <p>Each engagement is built around outcomes, not hours. Pricing varies by scope. Book a call and we'll figure out the right fit.</p>
+  </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:80px;">
+      <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1380,20 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+<nav class="anchor-nav">
+  <div class="anchor-nav-inner">
+    <a href="#foundation">Marketing Foundation</a>
+    <a href="#demand-gen">Demand Gen Sprint</a>
+    <a href="#fractional">Fractional Lead</a>
+  </div>
+</nav>
+
+
+<!-- SERVICE 1 -->
+<section id="foundation" class="svc-section">
+  <div class="svc-inner">
+    <div class="svc-grid fade-in">
+      <div>
+        <span class="svc-tag">One-time project &bull; 4 to 6 weeks</span>
+        <h2 class="svc-h2">Marketing Foundation Build</h2>
+        <p class="svc-italic">The "we need to look and sound like a real company" engagement.</p>
+        <div class="svc-body">
+          <p>Most water tech companies have a website that doesn't convert, messaging that doesn't land, and no consistent content engine. This rebuilds all of it.</p>
+        </div>
+        <p class="svc-who-label" style="margin-top:24px;">Who it's for</p>
+        <p class="svc-who-text">Founders who know their marketing isn't pulling its weight and want a complete reset.</p>
+      </div>
+      <div class="included-box fade-in fade-delay-1">
+        <p class="included-label">What's included</p>
+        <ul>
+          <li><span class="bullet"></span>ICP definition and buyer persona development for industrial and consumer markets</li>
+          <li><span class="bullet"></span>Positioning and messaging framework</li>
+          <li><span class="bullet"></span>Full website rebuild: copy, design, technical SEO baseline</li>
+          <li><span class="bullet"></span>3 to 5 cornerstone content pieces (long-form articles or landing pages)</li>
+          <li><span class="bullet"></span>3 to 5 AI-generated explainer videos for product, social, or homepage</li>
+          <li><span class="bullet"></span>SEO setup matched to your buyer geography</li>
+          <li><span class="bullet"></span>Brand voice and content guidelines for ongoing use</li>
+        </ul>
+        <a href="contact.html" class="btn-orange">Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#fff;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
+    <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,15 1440,30 L1440,60 L0,60 Z" fill="#003e51"/>
+  </svg>
+</div>
+
+
+<!-- SERVICE 2 -->
+<section id="demand-gen" class="svc-section svc-dark" style="padding-top:60px;">
+  <div class="svc-inner">
+    <div class="svc-grid">
+      <div class="included-box included-box-dark fade-in">
+        <p class="included-label included-label-light">What's included</p>
+        <ul>
+          <li><span class="bullet bullet-light"></span>Target account or audience list building</li>
+          <li><span class="bullet bullet-light"></span>Cold email infrastructure setup and warmup</li>
+          <li><span class="bullet bullet-light"></span>Multi-touch outbound sequences with engineer-grade messaging</li>
+          <li><span class="bullet bullet-light"></span>Conversion-focused landing pages</li>
+          <li><span class="bullet bullet-light"></span>LinkedIn outreach playbook for founder or sales rep</li>
+          <li><span class="bullet bullet-light"></span>Optional paid campaign setup (Meta for consumer, LinkedIn for industrial)</li>
+          <li><span class="bullet bullet-light"></span>Weekly reporting and iteration</li>
+        </ul>
+        <a href="contact.html" class="btn-orange">Book a Call</a>
+      </div>
+      <div class="fade-in fade-delay-1">
+        <span class="svc-tag svc-tag-dark">Focused engagement &bull; 4 to 8 weeks</span>
+        <h2 class="svc-h2 svc-h2-white">Demand Generation Sprint</h2>
+        <p class="svc-italic svc-italic-white">The "we have decent positioning but no leads coming in" engagement.</p>
+        <div class="svc-body svc-body-white">
+          <p>This puts your company in front of the right buyers and tests messaging in real market conditions.</p>
+        </div>
+        <p class="svc-who-label svc-who-label-white" style="margin-top:24px;">Who it's for</p>
+        <p class="svc-who-text svc-who-text-white">Companies with a working offer that need a system to consistently generate qualified conversations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#005f7d;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
+    <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,45 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+  </svg>
+</div>
+
+
+<!-- SERVICE 3 -->
+<section id="fractional" class="svc-section" style="padding-top:60px;">
+  <div class="svc-inner">
+    <div class="svc-grid fade-in">
+      <div>
+        <span class="svc-tag">Monthly retainer &bull; 3-month minimum</span>
+        <h2 class="svc-h2">Fractional Marketing Lead</h2>
+        <p class="svc-italic">For companies that need ongoing marketing leadership but aren't ready to hire full-time.</p>
+        <div class="svc-body">
+          <p>I act as your outsourced marketing brain: strategy, execution, and the systems that compound over time. Senior-level thinking without the cost of a full-time hire.</p>
+        </div>
+        <p class="svc-who-label" style="margin-top:24px;">Who it's for</p>
+        <p class="svc-who-text">Companies in growth mode that need consistent senior-level marketing without the cost of hiring in-house.</p>
+      </div>
+      <div class="included-box fade-in fade-delay-1">
+        <p class="included-label">What's included</p>
+        <ul>
+          <li><span class="bullet"></span>Weekly strategy call</li>
+          <li><span class="bullet"></span>Ongoing content production (1 to 2 cornerstone pieces per month)</li>
+          <li><span class="bullet"></span>Campaign management and optimization</li>
+          <li><span class="bullet"></span>Marketing automation buildout (n8n workflows, AI agents, lead routing)</li>
+          <li><span class="bullet"></span>Quarterly strategy reviews</li>
+          <li><span class="bullet"></span>Async access via Slack or email</li>
+        </ul>
+        <a href="contact.html" class="btn-orange">Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="wave" style="background:#fff;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
+    <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#003e51"/>
+  </svg>
+</div>
+<section class="bottom-cta fade-in">
+  <h2>Not sure which one fits?</h2>
+  <p>Most clients aren't, at first. Book a call and we'll talk through where you are and where the leverage is.</p>
+  <a href="contact.html" class="btn-orange">Book a 30-Minute Intro Call</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><div class="footer-brand">Eli Bergman</div><div class="footer-meta">&copy; 2025 Bergman Water Marketing</div></div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/eli-bergman/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:eli@elibergman.com">eli@elibergman.com</a>
+    </div>
+    <p class="footer-note">I don't work with utility-targeted vendors.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('open'));
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

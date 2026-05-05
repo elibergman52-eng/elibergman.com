@@ -1,0 +1,10 @@
+.vercel
+.DS_Store
+
+# Raw original photos (too large; assets/photos/ has the copies the site uses)
+*.jpg
+*.jpeg
+*.png
+!assets/photos/
+!assets/photos/**
+!assets/*.webp

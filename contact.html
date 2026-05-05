@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Call | Bergman Water Marketing</title>
+  <meta name="description" content="Book a 30-minute intro call with Eli Bergman. No pitch deck, no pressure. Water tech marketing consultant." />
+  <meta property="og:title" content="Book a Call | Bergman Water Marketing" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elibergman.com/contact" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #545454; line-height: 1.6; margin: 0; padding: 0; }
+    h1, h2, h3 { color: #003e51; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+
+    .nav-wrap { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(0,62,81,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.08); }
+    .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; height:68px; display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { color:#fff; font-weight:700; font-size:1.1rem; text-decoration:none; }
+    .nav-logo:hover { color:#67dfff; }
+    .nav-links { display:flex; align-items:center; gap:32px; }
+    .nav-link { color:rgba(255,255,255,0.8); font-size:0.9375rem; font-weight:500; text-decoration:none; transition:color 0.2s; }
+    .nav-link:hover { color:#fff; }
+    .nav-cta { display:inline-block; background:#e85d26; color:#fff; font-weight:600; font-size:0.875rem; padding:9px 22px; border-radius:9999px; text-decoration:none; transition:background 0.2s ease; }
+    .nav-cta:hover { background:#c94d1d; }
+    .hamburger { display:none; background:none; border:none; cursor:pointer; padding:8px; color:#fff; }
+    #mobile-menu { display:none; background:#003e51; border-top:1px solid rgba(255,255,255,0.1); padding:20px 24px; }
+    #mobile-menu.open { display:block; }
+    #mobile-menu a { display:block; color:rgba(255,255,255,0.85); font-size:1rem; font-weight:500; text-decoration:none; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
+
+    .page-hero { background:linear-gradient(140deg,#003e51 0%,#007da3 65%,#00a8cc 100%); padding:120px 24px 0; }
+    .page-hero-inner { max-width:700px; margin:0 auto; text-align:center; padding-bottom:60px; }
+    .page-hero-label { font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#67dfff; margin-bottom:16px; }
+    .page-hero h1 { color:#fff; font-size:clamp(1.8rem,4vw,3rem); font-weight:700; line-height:1.1; margin:0 0 14px; letter-spacing:-0.02em; }
+    .page-hero p { color:rgba(255,255,255,0.82); font-size:1.0625rem; line-height:1.75; margin:0; }
+    .wave { line-height:0; display:block; }
+    .wave svg { display:block; width:100%; }
+
+    /* Calendar card */
+    .calendar-section { padding:72px 24px; }
+    .calendar-inner { max-width:800px; margin:0 auto; }
+    #calendar-embed {
+      background:#fff;
+      border:1px solid #dbdbdb;
+      border-radius:16px;
+      min-height:520px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 4px 24px rgba(0,62,81,0.08),0 12px 40px rgba(0,62,81,0.04);
+      margin-bottom:40px;
+    }
+    .cal-placeholder { text-align:center; padding:48px 32px; }
+    .cal-icon { width:56px;height:56px;border-radius:50%;background:#e8f5f9;margin:0 auto 16px;display:flex;align-items:center;justify-content:center; }
+    .cal-placeholder h3 { font-size:1.125rem;color:#003e51;margin:0 0 8px; }
+    .cal-placeholder p { font-size:0.9375rem;line-height:1.65;color:#545454;max-width:320px;margin:0 auto; }
+
+    /* Email card */
+    .email-card { background:#f5f5f5; border:1px solid #dbdbdb; border-radius:16px; padding:40px; }
+    .email-card h2 { font-size:1.25rem; margin:0 0 12px; }
+    .email-card a { color:#007da3; font-weight:600; font-size:1.0625rem; text-decoration:none; }
+    .email-card a:hover { color:#003e51; }
+    .email-card-note { margin-top:20px; padding-top:20px; border-top:1px solid #dbdbdb; font-size:0.875rem; line-height:1.7; color:#545454; max-width:480px; }
+
+    /* What to expect */
+    .expect-section { padding:64px 24px; background:#f5f5f5; }
+    .expect-inner { max-width:800px; margin:0 auto; }
+    .expect-inner h2 { font-size:1.5rem; margin:0 0 32px; }
+    .expect-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .expect-item { background:#fff; border-radius:12px; padding:28px; border:1px solid #e8e8e8; }
+    .expect-num { width:32px;height:32px;border-radius:50%;background:#007da3;color:#fff;font-weight:700;font-size:0.875rem;display:flex;align-items:center;justify-content:center;margin-bottom:14px; }
+    .expect-item h3 { font-size:0.9375rem; color:#003e51; margin:0 0 8px; }
+    .expect-item p { font-size:0.875rem; line-height:1.65; color:#545454; margin:0; }
+
+    .footer { background:#003e51; color:rgba(255,255,255,0.65); padding:48px 24px; }
+    .footer-inner { max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px; }
+    .footer-brand { font-weight:700; color:#fff; font-size:1rem; }
+    .footer-meta { font-size:0.8rem; margin-top:4px; }
+    .footer-links { display:flex; gap:24px; }
+    .footer-links a { color:rgba(255,255,255,0.7); font-size:0.9rem; text-decoration:none; transition:color 0.2s; }
+    .footer-links a:hover { color:#fff; }
+    .footer-note { font-size:0.78rem; color:rgba(255,255,255,0.4); max-width:200px; text-align:right; line-height:1.5; }
+
+    .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.65s ease,transform 0.65s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+
+    @media (max-width:768px) {
+      .nav-links { display:none; }
+      .hamburger { display:block; }
+      .expect-grid { grid-template-columns:1fr; }
+      .footer-inner { flex-direction:column; align-items:flex-start; }
+      .footer-note { text-align:left; }
+    }
+  </style>
+</head>
+
+<body>
+<header class="nav-wrap">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Eli Bergman</a>
+    <nav class="nav-links">
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-cta">Book a Call</a>
+    </nav>
+    <button class="hamburger" id="menu-toggle" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="13" x2="21" y2="13"/><line x1="3" y1="19" x2="21" y2="19"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" style="color:#67dfff;font-weight:600;">Book a Call</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-label">Book a Call</p>
+    <h1>Let's see if there's a fit.</h1>
+    <p>A 30-minute intro call. No pitch deck, no pressure. We'll talk about where you are, where you're trying to go, and whether I'm the right person to help.</p>
+  </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:80px;">
+      <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1380,20 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+
+<section class="calendar-section">
+  <div class="calendar-inner">
+
+    <!-- Calendar embed goes here (Cal.com or Calendly) -->
+    <!-- Replace this div with your embed code, e.g.:
+         <div id="my-cal-inline"></div>
+         <script ... cal.com/eli-bergman/30min ...></script>
+    -->
+    <div id="calendar-embed" class="fade-in">
+      <div class="cal-placeholder">
+        <div class="cal-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#007da3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <h3>Calendar booking coming soon.</h3>
+        <p>In the meantime, reach out directly by email and we'll set up a time.</p>
+      </div>
+    </div>
+
+    <!-- Email fallback -->
+    <div class="email-card fade-in">
+      <h2>Prefer email?</h2>
+      <a href="mailto:eli@elibergman.com">eli@elibergman.com</a>
+      <p class="email-card-note">
+        Best for founders, growth leaders, and operators at water technology companies. If you sell to utilities, I'm probably not the right fit. No hard feelings.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WHAT TO EXPECT -->
+<section class="expect-section">
+  <div class="expect-inner">
+    <h2 class="fade-in">What to expect on the call.</h2>
+    <div class="expect-grid">
+      <div class="expect-item fade-in">
+        <div class="expect-num">1</div>
+        <h3>Where you are</h3>
+        <p>We'll spend a few minutes on your current situation: what you sell, who you sell to, and where marketing is breaking down.</p>
+      </div>
+      <div class="expect-item fade-in">
+        <div class="expect-num">2</div>
+        <h3>Where the leverage is</h3>
+        <p>Based on what you share, I'll tell you where I think the biggest opportunity is and how I'd approach it. No obligation.</p>
+      </div>
+      <div class="expect-item fade-in">
+        <div class="expect-num">3</div>
+        <h3>Whether there's a fit</h3>
+        <p>If it makes sense to work together, we'll talk about next steps. If not, I'll tell you honestly and point you somewhere useful.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><div class="footer-brand">Eli Bergman</div><div class="footer-meta">&copy; 2025 Bergman Water Marketing</div></div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/eli-bergman/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:eli@elibergman.com">eli@elibergman.com</a>
+    </div>
+    <p class="footer-note">I don't work with utility-targeted vendors.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('open'));
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

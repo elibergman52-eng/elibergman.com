@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Eli Bergman | Engineer-Led Water Tech Marketing</title>
+  <meta name="description" content="Eli Bergman is a water and wastewater engineer turned marketing consultant. He helps water technology companies selling to industrial and consumer markets get their go-to-market right." />
+  <meta property="og:title" content="About Eli Bergman | Engineer-Led Water Tech Marketing" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elibergman.com/about" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #545454; line-height: 1.6; margin: 0; padding: 0; }
+    h1, h2, h3 { color: #003e51; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+
+    .btn-orange { display:inline-block; background:#e85d26; color:#fff; font-weight:600; font-size:0.9375rem; padding:14px 32px; border-radius:9999px; text-decoration:none; transition:background 0.2s ease,transform 0.15s ease; }
+    .btn-orange:hover { background:#c94d1d; transform:translateY(-1px); }
+
+    .nav-wrap { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(0,62,81,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.08); }
+    .nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; height:68px; display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { color:#fff; font-weight:700; font-size:1.1rem; text-decoration:none; }
+    .nav-logo:hover { color:#67dfff; }
+    .nav-links { display:flex; align-items:center; gap:32px; }
+    .nav-link { color:rgba(255,255,255,0.8); font-size:0.9375rem; font-weight:500; text-decoration:none; transition:color 0.2s; }
+    .nav-link:hover,.nav-link.active { color:#fff; }
+    .nav-cta { display:inline-block; background:#e85d26; color:#fff; font-weight:600; font-size:0.875rem; padding:9px 22px; border-radius:9999px; text-decoration:none; transition:background 0.2s ease; }
+    .nav-cta:hover { background:#c94d1d; }
+    .hamburger { display:none; background:none; border:none; cursor:pointer; padding:8px; color:#fff; }
+    #mobile-menu { display:none; background:#003e51; border-top:1px solid rgba(255,255,255,0.1); padding:20px 24px; }
+    #mobile-menu.open { display:block; }
+    #mobile-menu a { display:block; color:rgba(255,255,255,0.85); font-size:1rem; font-weight:500; text-decoration:none; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
+
+    .page-hero { background:linear-gradient(140deg,#003e51 0%,#007da3 65%,#00a8cc 100%); padding-top:68px; position:relative; overflow:hidden; }
+    .page-hero-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; padding:80px 24px 60px; }
+    .page-hero-label { font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#67dfff; margin-bottom:16px; }
+    .page-hero h1 { color:#fff; font-size:clamp(1.8rem,4vw,3rem); font-weight:700; line-height:1.1; margin:0 0 14px; letter-spacing:-0.02em; }
+    .page-hero p { color:rgba(255,255,255,0.82); font-size:1.125rem; line-height:1.7; margin:0; }
+    .hero-portrait { width:100%; max-width:360px; height:400px; object-fit:cover; object-position:center top; border-radius:16px; box-shadow:0 24px 64px rgba(0,0,0,0.35); display:block; margin-left:auto; }
+
+    .wave { line-height:0; display:block; }
+    .wave svg { display:block; width:100%; }
+
+    /* Prose section */
+    .prose-section { max-width:760px; margin:0 auto; padding:80px 24px; }
+    .prose-section p { font-size:1.0625rem; line-height:1.85; color:#545454; margin-bottom:22px; }
+    .prose-section p:last-child { margin-bottom:0; }
+
+    /* Teal left-border list */
+    .teal-list { border-left:4px solid #007da3; padding-left:24px; margin:8px 0 24px; list-style:none; }
+    .teal-list li { font-size:0.9375rem; line-height:1.7; color:#545454; margin-bottom:10px; }
+    .teal-list li:last-child { margin-bottom:0; }
+
+    /* Photo break */
+    .photo-break { width:100%; height:420px; object-fit:cover; display:block; }
+    .photo-break-wrap { position:relative; overflow:hidden; }
+    .photo-break-caption { position:absolute; bottom:20px; left:24px; right:24px; color:rgba(255,255,255,0.8); font-size:0.875rem; }
+    .photo-break-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,62,81,0.6) 0%,transparent 60%); }
+
+    /* Stats row */
+    .stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; padding:64px 24px; background:#f5f5f5; }
+    .stats-row-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+    .stat-item { text-align:center; }
+    .stat-icon { width:56px; height:56px; border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; }
+    .stat-icon-blue { background:#007da3; }
+    .stat-icon-orange { background:#e85d26; }
+    .stat-icon-dark { background:#003e51; }
+    .stat-label { font-size:0.9375rem; font-weight:600; color:#003e51; margin-bottom:6px; }
+    .stat-body { font-size:0.875rem; line-height:1.6; color:#545454; }
+
+    /* CTA dark */
+    .dark-cta { background:linear-gradient(140deg,#003e51 0%,#005f7d 100%); padding:96px 24px; text-align:center; }
+    .dark-cta h2 { color:#fff; font-size:clamp(1.6rem,3.5vw,2.4rem); margin:0 0 14px; font-weight:700; }
+    .dark-cta p { color:rgba(255,255,255,0.8); font-size:1.0625rem; line-height:1.75; margin:0 0 36px; max-width:500px; margin-left:auto; margin-right:auto; }
+
+    .footer { background:#003e51; color:rgba(255,255,255,0.65); padding:48px 24px; }
+    .footer-inner { max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px; }
+    .footer-brand { font-weight:700; color:#fff; font-size:1rem; }
+    .footer-meta { font-size:0.8rem; margin-top:4px; }
+    .footer-links { display:flex; gap:24px; }
+    .footer-links a { color:rgba(255,255,255,0.7); font-size:0.9rem; text-decoration:none; transition:color 0.2s; }
+    .footer-links a:hover { color:#fff; }
+    .footer-note { font-size:0.78rem; color:rgba(255,255,255,0.4); max-width:200px; text-align:right; line-height:1.5; }
+
+    .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.65s ease,transform 0.65s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+    .fade-delay-1 { transition-delay:0.12s; }
+
+    @media (max-width:768px) {
+      .nav-links { display:none; }
+      .hamburger { display:block; }
+      .page-hero-inner { grid-template-columns:1fr; }
+      .hero-portrait { display:none; }
+      .stats-row-inner { grid-template-columns:1fr; }
+      .footer-inner { flex-direction:column; align-items:flex-start; }
+      .footer-note { text-align:left; }
+    }
+  </style>
+</head>
+
+<body>
+<header class="nav-wrap">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Eli Bergman</a>
+    <nav class="nav-links">
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="contact.html" class="nav-cta">Book a Call</a>
+    </nav>
+    <button class="hamburger" id="menu-toggle" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="13" x2="21" y2="13"/><line x1="3" y1="19" x2="21" y2="19"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="about.html" style="color:#67dfff;">About</a>
+    <a href="contact.html" style="color:#67dfff;font-weight:600;">Book a Call</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <p class="page-hero-label">About</p>
+      <h1>I'm Eli. I'm a water engineer who does marketing.</h1>
+      <p>That combination is rare, and it's the whole point.</p>
+    </div>
+    <div>
+      <img src="assets/photos/20250929_092053.jpg" alt="Eli Bergman at Water AI Nexus conference" class="hero-portrait" />
+    </div>
+  </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:80px;">
+      <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1380,20 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- BODY COPY -->
+<div class="prose-section fade-in">
+  <p>
+    I started my career in water and wastewater engineering. I designed infrastructure and treatment processes. I worked at firms in the US and Israel, including time as CTO of a water tech startup. I led implementations, trained operators, and sat in plenty of plant rooms and client offices.
+  </p>
+  <p>
+    Over time I noticed something about the water technology industry. The technical work is excellent. The marketing is, with rare exceptions, not. Founders build real solutions to real problems, then struggle to communicate why anyone should care. Agencies don't understand the buyer. Generalist marketers don't understand the technology. The work falls back on the founder, who isn't a marketer and shouldn't be.
+  </p>
+  <p>
+    I started this practice to close that gap.
+  </p>
+  <p>
+    My focus is water technology companies selling to industries and consumers. Food and beverage processors. Manufacturers. Agricultural operations. Commercial property owners. Homeowners and small businesses buying residential or commercial water systems. These are buyers who can be reached through smart marketing. They have websites, search behavior, and pipelines you can actually build.
+  </p>
+  <p>
+    I don't work with utility-targeted vendors. That market is won on RFPs, references, and relationship cycles measured in years. Marketing helps a little. Mostly it doesn't.
+  </p>
+</div>
+
+
+<!-- PHOTO BREAK 1 -->
+<div class="photo-break-wrap">
+  <img src="assets/photos/1716468129292.jpeg" alt="Eli Bergman receiving recognition at Aquaculture Philippines 2024, Manila" class="photo-break" style="object-position:center 30%;" />
+  <div class="photo-break-overlay"></div>
+  <p class="photo-break-caption">Aquaculture Philippines 2024, Manila</p>
+</div>
+
+
+<!-- WHAT I BRING -->
+<section style="padding:72px 24px; background:#f5f5f5;">
+  <div style="max-width:760px; margin:0 auto;">
+    <p class="fade-in" style="font-size:1.0625rem; line-height:1.85; color:#545454; margin-bottom:20px;">
+      What I bring is the combination most water tech companies can't find in one person:
+    </p>
+    <ul class="teal-list fade-in">
+      <li>Real engineering experience inside the water industry</li>
+      <li>Marketing, content, and demand generation skills built over years of practice</li>
+      <li>Comfort with automation, AI workflows, and modern marketing infrastructure</li>
+      <li>An operator's bias toward ROI and systems over campaigns and theater</li>
+    </ul>
+    <p class="fade-in" style="font-size:1.0625rem; line-height:1.85; color:#545454;">
+      If you're building water technology and your growth is constrained by how well the market understands what you do, let's talk.
+    </p>
+  </div>
+</section>
+
+
+<!-- PHOTO BREAK 2 -->
+<div class="photo-break-wrap">
+  <img src="assets/photos/20240901_131231.jpg" alt="Water treatment installation in arid landscape" class="photo-break" style="object-position:center 40%; height:320px;" />
+  <div class="photo-break-overlay" style="background:linear-gradient(to top,rgba(0,62,81,0.4) 0%,transparent 60%);"></div>
+</div>
+
+
+<!-- STATS / CREDENTIALS -->
+<section style="padding:72px 24px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:40px;" class="fade-in">
+      <div style="text-align:center; padding:32px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#007da3;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <p style="font-size:0.9375rem;font-weight:600;color:#003e51;margin-bottom:6px;">Engineering Background</p>
+        <p style="font-size:0.875rem;line-height:1.6;color:#545454;margin:0;">Water and wastewater engineering experience in the US and Israel, including CTO of a water tech startup.</p>
+      </div>
+      <div style="text-align:center; padding:32px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#e85d26;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <p style="font-size:0.9375rem;font-weight:600;color:#003e51;margin-bottom:6px;">Industrial Buyer Knowledge</p>
+        <p style="font-size:0.875rem;line-height:1.6;color:#545454;margin:0;">Years spent across the desk from operators, engineers, and industrial decision makers in food and beverage, agriculture, and manufacturing.</p>
+      </div>
+      <div style="text-align:center; padding:32px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#003e51;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <p style="font-size:0.9375rem;font-weight:600;color:#003e51;margin-bottom:6px;">Modern Marketing Stack</p>
+        <p style="font-size:0.875rem;line-height:1.6;color:#545454;margin:0;">Fluent in automation, AI workflows, outbound infrastructure, and demand generation tools. Marketing as a compounding system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<div class="wave" style="background:#fff;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
+    <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,15 1440,30 L1440,60 L0,60 Z" fill="#003e51"/>
+  </svg>
+</div>
+<section class="dark-cta fade-in">
+  <h2>Book a 30-Minute Intro Call.</h2>
+  <p>No pitch deck, no pressure. We'll talk about where you are, where you're trying to go, and whether I'm the right person to help.</p>
+  <a href="contact.html" class="btn-orange">Book a 30-Minute Intro Call</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><div class="footer-brand">Eli Bergman</div><div class="footer-meta">&copy; 2025 Bergman Water Marketing</div></div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/eli-bergman/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:eli@elibergman.com">eli@elibergman.com</a>
+    </div>
+    <p class="footer-note">I don't work with utility-targeted vendors.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('open'));
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
