@@ -407,7 +407,6 @@ h3{
   gap:14px;
   align-items:center;
   flex-wrap:wrap;
-  margin-bottom:0;
 }
 .btn{
   padding:16px 32px;
@@ -460,7 +459,8 @@ h3{
   font-size:13px;
   letter-spacing:0.08em;
   color:var(--ink-dim);
-  margin-top:20px;
+  margin-top:0;
+  margin-bottom:20px;
 }
 
 /* Hero route map */
@@ -469,11 +469,13 @@ h3{
   left:-2%;right:-2%;
   bottom:0;
   width:104%;
-  height:32vh;
-  max-height:300px;
+  height:28vh;
+  max-height:240px;
   pointer-events:none;
   z-index:1;
   color:var(--hi-vis);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.2) 35%,black 70%);
+  mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.2) 35%,black 70%);
 }
 .hero-route .route-baseline{stroke:var(--ink-faint);stroke-width:1;stroke-dasharray:1 6;opacity:0.3}
 .hero-route .route-contour{fill:none;stroke:currentColor;stroke-width:1;opacity:0.14}
@@ -1014,6 +1016,7 @@ footer a:hover{color:rgba(251,248,241,0.9)}
 
     <p class="hero-sub">I'm an engineer turned marketing consultant. Founders bring me in when they're done planning and ready to put real miles on the road. <strong>Water tech</strong> is the course I know best. <strong>AI automation</strong> is the training advantage I bring to every engagement.</p>
 
+    <div class="micro">Selective engagements outside my specialties, when the pace matches.</div>
     <div class="cta-row">
       <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/eli-bergman52/30min'});return false;" class="btn btn-primary">
         Book a 30-minute call
@@ -1023,7 +1026,6 @@ footer a:hover{color:rgba(251,248,241,0.9)}
       </a>
       <a href="#services" class="btn btn-secondary">See how I work</a>
     </div>
-    <div class="micro">Selective engagements outside my specialties, when the pace matches.</div>
   </div>
 
   <div class="scroll-cue">
