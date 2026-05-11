@@ -1,523 +1,1577 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marketing and GTM Consulting for Water Technology Companies | Eli Bergman</title>
-  <meta name="description" content="Engineer-led marketing and go-to-market consulting for water technology companies selling to industrial and consumer markets. Eli Bergman, water engineer turned marketing consultant." />
-  <meta property="og:title" content="Marketing and GTM Consulting for Water Technology Companies | Eli Bergman" />
-  <meta property="og:description" content="Engineer-led marketing and go-to-market consulting for water technology companies selling to industrial and consumer markets." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elibergman.com" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eli Bergman | Marketing &amp; AI Automation for SMBs</title>
+<meta name="description" content="Engineer turned marketing consultant. I help water tech founders and B2B SMBs build marketing systems and AI automation that actually ship.">
+<meta name="author" content="Eli Bergman">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://elibergman.com/">
+<meta property="og:title" content="Eli Bergman | Marketing &amp; AI Automation for SMBs">
+<meta property="og:description" content="Engineer turned marketing consultant. Water tech specialist. AI automation builder. Bring me in when it's time to run.">
+<meta property="og:image" content="https://elibergman.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://elibergman.com/">
+<meta name="twitter:title" content="Eli Bergman | Marketing &amp; AI Automation for SMBs">
+<meta name="twitter:description" content="Engineer turned marketing consultant. Water tech specialist. AI automation builder.">
+<meta name="twitter:image" content="https://elibergman.com/og-image.png">
+<link rel="canonical" href="https://elibergman.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Anton&display=swap" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<style>
+/* ============ RESET & VARIABLES ============ */
+*{margin:0;padding:0;box-sizing:border-box}
+*::selection{background:var(--hi-vis);color:var(--paper)}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+:root{
+  --paper:#fbf8f1;
+  --paper-deep:#f3eee2;
+  --paper-warm:#ede6d4;
+  --paper-dim:#e5dece;
+  --ink:#0f0f0e;
+  --ink-soft:#2d2d2c;
+  --ink-mid:#4a4a48;
+  --ink-dim:#6b6b67;
+  --ink-faint:#a8a8a2;
+  --rule:#d8d3c2;
+  --rule-soft:#e8e3d3;
+  --hi-vis:#c84518;
+  --hi-vis-deep:#a83812;
+  --hi-vis-soft:rgba(200,69,24,0.07);
+  --hi-vis-glow:rgba(200,69,24,0.12);
+  --water:#1f4e6b;
+  --water-soft:rgba(31,78,107,0.07);
+  --ai:#2a2a2a;
+  --nav-h:72px;
+  --shadow-card:
+    0 2px 6px -2px rgba(15,15,14,0.04),
+    0 8px 24px -8px rgba(15,15,14,0.06),
+    0 24px 56px -24px rgba(15,15,14,0.04);
+  --shadow-card-hover:
+    0 4px 12px -4px rgba(15,15,14,0.06),
+    0 20px 48px -16px rgba(15,15,14,0.1),
+    0 40px 80px -32px rgba(15,15,14,0.06);
+}
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'] },
-          colors: {
-            'xylem-blue':   '#007da3',
-            'xylem-dark':   '#003e51',
-            'xylem-mid':    '#005f7d',
-            'xylem-light':  '#e8f5f9',
-            'xylem-orange': '#e85d26',
-            'xylem-gray':   '#545454',
-            'xylem-gray2':  '#f5f5f5',
-          },
-        },
-      },
-    }
-  </script>
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.55;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 64px;
+}
+@media(max-width:768px){
+  .wrap{padding:0 24px}
+  body{font-size:16px}
+}
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-      background: #fff;
-      color: #545454;
-      line-height: 1.6;
-      margin: 0; padding: 0;
-    }
-    h1, h2, h3, h4 { color: #003e51; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+/* ============ GRAIN OVERLAY ============ */
+.grain-overlay{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9999;
+  opacity:1;
+}
+.grain-overlay svg{
+  width:100%;
+  height:100%;
+  display:block;
+}
 
-    /* Buttons */
-    .btn-orange {
-      display: inline-block;
-      background: #e85d26;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.9375rem;
-      padding: 14px 32px;
-      border-radius: 9999px;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.15s ease;
-    }
-    .btn-orange:hover { background: #c94d1d; transform: translateY(-1px); }
-    .btn-orange:active { transform: translateY(0); }
+/* ============ NAV ============ */
+#nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:500;
+  padding:20px 0;
+  transition:padding 320ms ease,background 320ms ease,backdrop-filter 320ms ease,box-shadow 320ms ease,border-color 320ms ease;
+}
+#nav.scrolled{
+  padding:12px 0;
+  background:rgba(251,248,241,0.88);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(216,211,194,0.6);
+  box-shadow:0 4px 28px -8px rgba(15,15,14,0.07),0 1px 0 rgba(216,211,194,0.4);
+}
+#nav .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.brand{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  cursor:pointer;
+  text-decoration:none;
+}
+.brand-name{
+  font-family:'Fraunces',serif;
+  font-variation-settings:"opsz" 28;
+  font-weight:500;
+  font-size:1.125rem;
+  letter-spacing:-0.015em;
+  color:var(--ink);
+}
+.brand-bib{
+  font-family:'Anton',sans-serif;
+  font-size:0.75rem;
+  letter-spacing:0.12em;
+  color:var(--hi-vis);
+  border:1.5px solid var(--hi-vis);
+  padding:1px 6px 0;
+  border-radius:2px;
+  text-transform:uppercase;
+  position:relative;
+  top:-1px;
+}
+.nav-links{
+  display:flex;
+  gap:32px;
+  font-size:12px;
+  color:var(--ink-mid);
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  font-weight:500;
+}
+.nav-links a{color:inherit;text-decoration:none;transition:color 200ms ease}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.nav-cta{
+  padding:10px 20px;
+  border:1.5px solid var(--ink);
+  border-radius:2px;
+  color:var(--ink);
+  text-decoration:none;
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  transition:all 180ms ease;
+}
+.nav-cta:hover{background:var(--ink);color:var(--paper)}
+.hamburger{
+  display:none;
+  width:36px;
+  height:36px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:6px;
+  color:var(--ink);
+  flex-direction:column;
+  gap:5px;
+  justify-content:center;
+  align-items:flex-end;
+}
+.hamburger span{
+  display:block;
+  height:1.5px;
+  background:currentColor;
+  border-radius:1px;
+  transition:all 280ms cubic-bezier(0.22,1,0.36,1);
+}
+.hamburger span:nth-child(1){width:22px}
+.hamburger span:nth-child(2){width:16px}
+.hamburger span:nth-child(3){width:22px}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);width:22px}
+.hamburger.open span:nth-child(2){opacity:0;width:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);width:22px}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-cta{display:none}
+}
 
-    .btn-outline-white {
-      display: inline-block;
-      background: transparent;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.9375rem;
-      padding: 13px 32px;
-      border-radius: 9999px;
-      border: 2px solid rgba(255,255,255,0.6);
-      text-decoration: none;
-      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-    }
-    .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: #fff; transform: translateY(-1px); }
+/* ============ MOBILE DRAWER ============ */
+#mobileDrawer{
+  position:fixed;
+  inset:0;
+  z-index:400;
+  background:var(--paper);
+  transform:translateX(105%);
+  transition:transform 380ms cubic-bezier(0.22,1,0.36,1);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:96px 48px 64px;
+  gap:0;
+}
+#mobileDrawer.open{transform:translateX(0)}
+.drawer-link{
+  font-family:'Fraunces',serif;
+  font-variation-settings:"opsz" 48;
+  font-weight:500;
+  font-size:2.5rem;
+  letter-spacing:-0.02em;
+  color:var(--ink);
+  text-decoration:none;
+  display:block;
+  padding:12px 0;
+  border-bottom:1px solid var(--rule-soft);
+  transition:color 200ms ease,padding-left 200ms ease;
+}
+.drawer-link:hover{color:var(--hi-vis);padding-left:8px}
+.drawer-cta-row{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-top:40px;
+}
+.drawer-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:16px 32px;
+  background:var(--ink);
+  color:var(--paper);
+  border:1.5px solid var(--ink);
+  border-radius:2px;
+  font-size:12px;
+  font-weight:600;
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  transition:all 200ms ease;
+}
+.drawer-cta:hover{background:var(--hi-vis);border-color:var(--hi-vis)}
+.drawer-brand{
+  position:absolute;
+  top:24px;
+  left:48px;
+  font-family:'Fraunces',serif;
+  font-variation-settings:"opsz" 28;
+  font-weight:500;
+  font-size:1rem;
+  color:var(--ink-dim);
+  letter-spacing:-0.01em;
+}
+.drawer-close{
+  position:absolute;
+  top:20px;
+  right:24px;
+  width:44px;
+  height:44px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-    .btn-blue {
-      display: inline-block;
-      background: #007da3;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.9375rem;
-      padding: 14px 32px;
-      border-radius: 9999px;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.15s ease;
-    }
-    .btn-blue:hover { background: #005f7d; transform: translateY(-1px); }
+/* ============ TYPE SYSTEM ============ */
+h1.display{
+  font-family:'Fraunces',serif;
+  font-variation-settings:"opsz" 144,"SOFT" 50;
+  font-weight:500;
+  font-size:clamp(3.75rem,11vw,10rem);
+  line-height:0.91;
+  letter-spacing:-0.038em;
+  color:var(--ink);
+}
+h2.section-title{
+  font-family:'Fraunces',serif;
+  font-variation-settings:"opsz" 96;
+  font-weight:500;
+  font-size:clamp(2.5rem,5.5vw,4.5rem);
+  line-height:0.94;
+  letter-spacing:-0.025em;
+  margin-bottom:28px;
+  max-width:920px;
+}
+h3{
+  font-family:'Fraunces',serif;
+  font-variation-settings:"opsz" 48;
+  font-weight:500;
+  letter-spacing:-0.015em;
+}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--ink-dim);
+  margin-bottom:24px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.eyebrow .dash{
+  display:inline-block;
+  width:28px;
+  height:1.5px;
+  background:var(--hi-vis);
+  flex-shrink:0;
+}
+.eyebrow .pulse{
+  width:6px;
+  height:6px;
+  background:var(--hi-vis);
+  border-radius:50%;
+  box-shadow:0 0 0 0 var(--hi-vis);
+  flex-shrink:0;
+}
+.revealed .eyebrow .pulse{animation:pulse 2200ms ease-out 600ms}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(200,69,24,0.5)}
+  100%{box-shadow:0 0 0 14px rgba(200,69,24,0)}
+}
 
-    /* Nav */
-    .nav-wrap {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(0,62,81,0.95);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { color: #fff; font-weight: 700; font-size: 1.1rem; text-decoration: none; letter-spacing: -0.01em; }
-    .nav-logo:hover { color: #67dfff; }
-    .nav-links { display: flex; align-items: center; gap: 32px; }
-    .nav-link { color: rgba(255,255,255,0.8); font-size: 0.9375rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
-    .nav-link:hover { color: #fff; }
-    .nav-cta { display: inline-block; background: #e85d26; color: #fff; font-weight: 600; font-size: 0.875rem; padding: 9px 22px; border-radius: 9999px; text-decoration: none; transition: background 0.2s ease; }
-    .nav-cta:hover { background: #c94d1d; }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: #fff; }
+/* ============ HERO ============ */
+.hero{
+  padding-top:calc(var(--nav-h) + 64px);
+  padding-bottom:100px;
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+/* Warm radial glow behind headline */
+.hero::before{
+  content:"";
+  position:absolute;
+  top:-10%;left:-8%;
+  width:72%;height:90%;
+  background:radial-gradient(ellipse at 30% 40%,rgba(200,69,24,0.055) 0%,transparent 60%);
+  pointer-events:none;
+  z-index:0;
+}
+.hero .wrap{position:relative;z-index:2}
+.hero-meta{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:52px;
+  flex-wrap:wrap;
+}
+.hero-meta-item{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--ink-mid);
+}
+.hero-meta-item.accent{color:var(--hi-vis)}
+.hero-meta-rule{
+  width:1px;
+  height:12px;
+  background:var(--rule);
+  flex-shrink:0;
+}
+.hero-sub{
+  font-family:'Fraunces',serif;
+  font-variation-settings:"opsz" 20;
+  font-weight:400;
+  font-size:clamp(1.125rem,2vw,1.5rem);
+  line-height:1.45;
+  color:var(--ink-soft);
+  max-width:720px;
+  margin-top:56px;
+  margin-bottom:52px;
+}
+.hero-sub strong{
+  color:var(--ink);
+  font-weight:500;
+  font-style:italic;
+}
+.cta-row{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom:24px;
+}
+.btn{
+  padding:16px 32px;
+  border-radius:2px;
+  font-size:12px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  transition:all 220ms cubic-bezier(0.22,1,0.36,1);
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+.btn-primary{
+  background:var(--ink);
+  color:var(--paper);
+  border:1.5px solid var(--ink);
+  box-shadow:0 2px 8px -2px rgba(15,15,14,0.15),0 6px 20px -6px rgba(15,15,14,0.1);
+}
+.btn-primary:hover{
+  background:var(--hi-vis);
+  border-color:var(--hi-vis);
+  box-shadow:0 4px 16px -4px rgba(200,69,24,0.3),0 8px 32px -8px rgba(200,69,24,0.2);
+  transform:translateY(-1px);
+}
+.btn-primary:hover .btn-icon{transform:rotate(45deg)}
+.btn-primary:active{transform:translateY(0)}
+.btn-secondary{
+  color:var(--ink);
+  border:1.5px solid var(--rule);
+  background:transparent;
+}
+.btn-secondary:hover{
+  border-color:var(--ink);
+  transform:translateY(-1px);
+}
+.btn-secondary:active{transform:translateY(0)}
+.btn-icon{
+  width:13px;
+  height:13px;
+  transition:transform 280ms ease;
+  flex-shrink:0;
+}
+.micro{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;
+  letter-spacing:0.14em;
+  color:var(--ink-faint);
+  margin-top:12px;
+}
 
-    /* Hero */
-    .hero {
-      background: linear-gradient(140deg, #003e51 0%, #007da3 65%, #00a8cc 100%);
-      padding-top: 68px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-inner { max-width: 1200px; margin: 0 auto; padding: 80px 24px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .hero-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #67dfff; margin-bottom: 20px; }
-    .hero h1 { color: #fff; font-size: clamp(2rem, 4vw, 2.9rem); font-weight: 700; line-height: 1.1; margin: 0 0 20px; letter-spacing: -0.02em; }
-    .hero p { color: rgba(255,255,255,0.82); font-size: 1.0625rem; line-height: 1.75; margin: 0 0 36px; }
-    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
-    .hero-img { position: relative; }
-    .hero-img img {
-      width: 100%;
-      max-width: 480px;
-      height: 420px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 16px;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.35);
-      display: block;
-      margin-left: auto;
-    }
-    .hero-img-overlay {
-      position: absolute;
-      inset: 0;
-      border-radius: 16px;
-      background: linear-gradient(to top, rgba(0,62,81,0.5) 0%, transparent 60%);
-    }
+/* Hero route map */
+.hero-route{
+  position:absolute;
+  left:-2%;right:-2%;
+  bottom:0;
+  width:104%;
+  height:32vh;
+  max-height:300px;
+  pointer-events:none;
+  z-index:1;
+  color:var(--hi-vis);
+}
+.hero-route .route-baseline{stroke:var(--ink-faint);stroke-width:1;stroke-dasharray:1 6;opacity:0.3}
+.hero-route .route-contour{fill:none;stroke:currentColor;stroke-width:1;opacity:0.14}
+.hero-route .route-line{
+  fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;
+  stroke-dasharray:3200;stroke-dashoffset:3200;
+  animation:traceIn 2400ms cubic-bezier(0.22,1,0.36,1) 600ms forwards;
+}
+@keyframes traceIn{to{stroke-dashoffset:0}}
+.hero-route .mile-pin{fill:var(--paper);stroke:currentColor;stroke-width:1.75;opacity:0;animation:fadeIn 400ms ease forwards}
+.hero-route .mile-pin-active{fill:currentColor;stroke:currentColor;stroke-width:1.75;opacity:0;animation:fadeIn 400ms ease forwards}
+.hero-route .mile-tick{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:currentColor;opacity:0;animation:fadeIn 500ms ease forwards;letter-spacing:0.16em}
+.hero-route .start-finish{font-family:'JetBrains Mono',monospace;font-size:9px;fill:var(--ink-mid);letter-spacing:0.22em;opacity:0;animation:fadeIn 500ms ease 1600ms forwards}
+.hero-route .pin-1{animation-delay:1100ms}
+.hero-route .pin-2{animation-delay:1400ms}
+.hero-route .pin-3{animation-delay:1700ms}
+.hero-route .pin-4{animation-delay:2000ms}
+.hero-route .pin-5{animation-delay:2300ms}
+.hero-route .pin-6{animation-delay:2600ms}
+@keyframes fadeIn{to{opacity:1}}
 
-    /* Wave dividers */
-    .wave { line-height: 0; display: block; }
-    .wave svg { display: block; width: 100%; }
+/* Scroll cue */
+.scroll-cue{
+  position:absolute;
+  left:50%;bottom:40px;
+  transform:translateX(-50%);
+  font-family:'JetBrains Mono',monospace;
+  font-size:9.5px;letter-spacing:0.24em;color:var(--ink-dim);text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  z-index:4;opacity:0;animation:fadeIn 600ms ease 3400ms forwards;
+}
+.scroll-cue .line{width:1px;height:24px;background:var(--ink-dim);animation:scrollLine 1800ms ease-in-out infinite}
+@keyframes scrollLine{
+  0%,100%{transform:scaleY(1);transform-origin:top}
+  50%{transform:scaleY(0.3);transform-origin:top}
+}
 
-    /* Section base */
-    .section { padding: 80px 24px; }
-    .section-inner { max-width: 1200px; margin: 0 auto; }
-    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #007da3; margin-bottom: 12px; }
-    .section-h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: #003e51; margin: 0 0 16px; letter-spacing: -0.02em; line-height: 1.15; }
+/* ============ SECTION BASE ============ */
+section.block{
+  padding:200px 0;
+  position:relative;
+}
+@media(max-width:768px){section.block{padding:120px 0}}
 
-    /* Two-col layout */
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-    .two-col-img img { width: 100%; height: 360px; object-fit: cover; border-radius: 14px; box-shadow: 0 8px 40px rgba(0,62,81,0.15); }
+/* Section divider */
+.section-divider{
+  height:1px;background:var(--rule);position:relative;margin:0 auto;max-width:1280px;
+}
+.section-divider.padded{margin:0 64px}
+@media(max-width:768px){.section-divider.padded{margin:0 24px}}
+.section-divider svg{
+  position:absolute;left:50%;top:-8px;
+  transform:translateX(-50%);
+  width:80px;height:16px;
+  color:var(--hi-vis);opacity:0.55;
+}
 
-    /* Who I work with cards */
-    .fit-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .fit-card { border-radius: 14px; padding: 36px; }
-    .fit-card--yes { background: #e8f5f9; border: 1.5px solid #b3dde9; }
-    .fit-card--no  { background: #f9f9f9; border: 1.5px solid #e0e0e0; }
-    .fit-card-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
-    .fit-card--yes .fit-card-label { color: #007da3; }
-    .fit-card--no  .fit-card-label { color: #a8a8a8; }
-    .fit-card ul { list-style: none; padding: 0; margin: 0; }
-    .fit-card ul li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 14px; font-size: 0.9375rem; line-height: 1.6; color: #545454; }
-    .fit-card ul li:last-child { margin-bottom: 0; }
-    .check { flex-shrink: 0; margin-top: 3px; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-    .check-yes { background: #007da3; }
-    .check-no  { background: #dbdbdb; }
+/* ============ REVEAL SYSTEM ============ */
+.reveal{
+  opacity:0;transform:translateY(32px);
+  transition:opacity 1100ms cubic-bezier(0.22,1,0.36,1),transform 1100ms cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.revealed{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:120ms}
+.reveal-d2{transition-delay:240ms}
+.reveal-d3{transition-delay:360ms}
+.reveal-d4{transition-delay:480ms}
 
-    /* Service cards */
-    .service-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .service-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 14px;
-      padding: 36px 32px;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-    .service-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
-    .service-card h3 { color: #fff; font-size: 1.2rem; margin: 0 0 10px; }
-    .service-card p { color: rgba(255,255,255,0.68); font-size: 0.9rem; line-height: 1.65; margin: 0 0 20px; }
-    .service-card ul { list-style: none; padding: 0; margin: 0 0 24px; }
-    .service-card ul li { color: rgba(255,255,255,0.75); font-size: 0.875rem; line-height: 1.6; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; gap: 8px; }
-    .service-card ul li::before { content: '+'; color: #67dfff; font-weight: 700; flex-shrink: 0; }
-    .service-card a { color: #67dfff; font-size: 0.875rem; font-weight: 600; text-decoration: none; }
-    .service-card a:hover { color: #fff; }
+/* ============ PATTERN SECTION ============ */
+.pattern h2.section-title{max-width:980px}
+.pattern .pattern-body{
+  display:grid;
+  grid-template-columns:1fr 700px;
+  gap:80px;
+  margin-top:64px;
+  align-items:start;
+}
+@media(max-width:1100px){.pattern .pattern-body{grid-template-columns:1fr;gap:48px}}
+.pattern .pattern-aside{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;letter-spacing:0.18em;color:var(--ink-dim);text-transform:uppercase;
+  line-height:1.9;padding-top:12px;border-top:1px solid var(--ink);
+}
+.pattern p{
+  font-family:'Fraunces',serif;
+  font-variation-settings:"opsz" 14;
+  font-weight:400;font-size:1.25rem;line-height:1.58;color:var(--ink-soft);margin-bottom:24px;
+}
+.pattern .closing{
+  font-family:'Fraunces',serif;
+  font-variation-settings:"opsz" 36;
+  font-style:italic;font-size:1.625rem;color:var(--ink);
+  border-left:2.5px solid var(--hi-vis);padding-left:24px;margin-top:40px;font-weight:400;
+  line-height:1.3;
+}
 
-    /* Why section */
-    .why-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
-    .why-item h3 { font-size: 1.1rem; color: #003e51; margin: 0 0 10px; }
-    .why-item p { font-size: 0.9375rem; line-height: 1.75; margin: 0; }
+/* ============ TRACK SHIFT ============ */
+.track-shift{
+  height:280px;position:relative;overflow:hidden;background:var(--paper);
+}
+.track-shift svg{position:absolute;inset:0;width:100%;height:100%;color:var(--hi-vis)}
+.track-shift .ts-line{
+  fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;
+  stroke-dasharray:2500;stroke-dashoffset:2500;
+  transition:stroke-dashoffset 2000ms cubic-bezier(0.22,1,0.36,1);
+}
+.track-shift.revealed .ts-line{stroke-dashoffset:0}
+.track-shift .ts-pin{fill:var(--paper);stroke:currentColor;stroke-width:1.5;opacity:0;transition:opacity 400ms ease}
+.track-shift.revealed .ts-pin{opacity:1;transition-delay:1800ms}
+.track-shift .ts-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;fill:var(--ink-mid);
+  letter-spacing:0.22em;text-transform:uppercase;opacity:0;transition:opacity 400ms ease;
+}
+.track-shift.revealed .ts-label{opacity:1;transition-delay:2000ms}
 
-    /* Proof placeholder */
-    .proof-placeholder { border: 2px dashed #dbdbdb; border-radius: 14px; padding: 64px; text-align: center; color: #a8a8a8; font-size: 0.9rem; }
+/* ============ SPECIALTIES ============ */
+.specialties .specialties-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:72px;
+}
+@media(max-width:900px){.specialties .specialties-grid{grid-template-columns:1fr}}
 
-    /* About preview */
-    .about-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 32px rgba(0,62,81,0.18); display: block; }
+.spec-card{
+  position:relative;padding:56px 48px 52px;
+  background:white;
+  border:1px solid var(--rule);
+  overflow:hidden;
+  transition:transform 400ms cubic-bezier(0.22,1,0.36,1),box-shadow 400ms cubic-bezier(0.22,1,0.36,1),border-color 400ms ease;
+  box-shadow:var(--shadow-card);
+}
+.spec-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-card-hover);
+  border-color:rgba(200,69,24,0.15);
+}
+.spec-pattern{
+  position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0.7;
+}
+.spec-card-body{position:relative;z-index:2}
 
-    /* Dark CTA section */
-    .dark-section { background: linear-gradient(140deg, #003e51 0%, #005f7d 100%); position: relative; overflow: hidden; }
-    .dark-section-inner { max-width: 700px; margin: 0 auto; text-align: center; padding: 96px 24px; }
-    .dark-section h2 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 16px; }
-    .dark-section p { color: rgba(255,255,255,0.8); font-size: 1.0625rem; line-height: 1.75; margin: 0 0 40px; }
+.water-card{border-top:3px solid var(--water)}
+.water-card .spec-pattern{color:var(--water)}
 
-    /* Footer */
-    .footer { background: #003e51; color: rgba(255,255,255,0.65); padding: 48px 24px; }
-    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
-    .footer-brand { font-weight: 700; color: #fff; font-size: 1rem; }
-    .footer-meta { font-size: 0.8rem; margin-top: 4px; }
-    .footer-links { display: flex; gap: 24px; align-items: center; }
-    .footer-links a { color: rgba(255,255,255,0.7); font-size: 0.9rem; text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: #fff; }
+.ai-card{border-top:3px solid var(--ink)}
+.ai-card .spec-pattern{color:var(--ai);opacity:0.5}
 
-    /* Fade-in */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .fade-delay-1 { transition-delay: 0.1s; }
-    .fade-delay-2 { transition-delay: 0.2s; }
+.spec-tag{
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--ink-dim);margin-bottom:22px;
+}
+.water-card .spec-tag{color:var(--water)}
+.ai-card .spec-tag{color:var(--hi-vis)}
 
-    /* Mobile menu */
-    #mobile-menu { display: none; background: #003e51; border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 24px; }
-    #mobile-menu.open { display: block; }
-    #mobile-menu a { display: block; color: rgba(255,255,255,0.85); font-size: 1rem; font-weight: 500; text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    #mobile-menu a:last-child { border-bottom: none; }
+.spec-card h3{font-size:2.625rem;line-height:0.97;margin-bottom:10px}
+.spec-card .spec-sub{
+  font-family:'Fraunces',serif;font-variation-settings:"opsz" 20;
+  font-style:italic;color:var(--ink-mid);font-size:1.0625rem;margin-bottom:36px;
+}
+.spec-card p{color:var(--ink-soft);line-height:1.65;margin-bottom:36px;font-size:1rem}
+.spec-link{
+  display:inline-flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;
+  font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
+  padding-bottom:5px;border-bottom:1.5px solid var(--ink);
+  transition:gap 240ms ease,color 200ms ease,border-color 200ms ease;
+}
+.spec-link:hover{gap:14px;color:var(--hi-vis);border-color:var(--hi-vis)}
+.spec-link .arrow{width:12px;height:12px;transition:transform 240ms ease}
+.spec-link:hover .arrow{transform:translateX(4px)}
 
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: block; }
-      .hero-inner { grid-template-columns: 1fr; gap: 36px; padding: 60px 24px 40px; }
-      .hero-img { display: none; }
-      .two-col { grid-template-columns: 1fr; gap: 36px; }
-      .fit-cards { grid-template-columns: 1fr; }
-      .service-cards { grid-template-columns: 1fr; }
-      .why-cols { grid-template-columns: 1fr; gap: 32px; }
-      .footer-inner { flex-direction: column; align-items: flex-start; }
-      .footer-note { text-align: left; }
-    }
-  </style>
+/* ============ SERVICES — RACE BIBS ============ */
+.services .services-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:72px;
+}
+@media(max-width:900px){.services .services-grid{grid-template-columns:1fr}}
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Bergman Water Marketing",
-    "description": "Engineer-led marketing and go-to-market consulting for water technology companies.",
-    "founder": { "@type": "Person", "name": "Eli Bergman" },
-    "url": "https://elibergman.com",
-    "email": "eli@elibergman.com"
-  }
-  </script>
+.bib-card{
+  background:white;border:1px solid var(--rule);
+  padding:0;position:relative;
+  transition:transform 320ms cubic-bezier(0.22,1,0.36,1),box-shadow 320ms ease;
+  box-shadow:var(--shadow-card);
+}
+.bib-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-card-hover);
+}
+.bib-card.featured{border-color:var(--hi-vis);border-width:1.5px}
+.bib-card.featured .bib-pin{background:var(--hi-vis)}
+
+/* Torn edge bottom */
+.bib-card::after{
+  content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;
+  background-image:linear-gradient(135deg,var(--paper) 25%,transparent 25%),
+                    linear-gradient(225deg,var(--paper) 25%,transparent 25%);
+  background-size:12px 12px;background-position:0 0;background-repeat:repeat-x;
+  pointer-events:none;
+}
+
+.bib-card .bib-pin{
+  position:absolute;width:7px;height:7px;background:var(--ink);border-radius:50%;top:16px;
+}
+.bib-card .bib-pin.tl{left:16px}
+.bib-card .bib-pin.tr{right:16px}
+
+.bib-inner{padding:48px 44px 60px}
+
+.bib-card .timing-chip{
+  position:absolute;right:14px;top:50%;
+  transform:translateY(-50%) rotate(90deg);transform-origin:center;
+  font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.32em;
+  text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;
+}
+
+.bib-top{
+  display:flex;align-items:flex-start;gap:28px;margin-bottom:28px;
+  padding-bottom:22px;border-bottom:1px dashed var(--rule);
+}
+.bib-num{
+  font-family:'Anton',sans-serif;font-size:4.75rem;line-height:0.85;
+  color:var(--hi-vis);letter-spacing:0.02em;flex-shrink:0;
+}
+.bib-label-block{padding-top:6px}
+.bib-label{
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--ink-mid);margin-bottom:6px;
+}
+.bib-tagline{
+  font-family:'Fraunces',serif;font-variation-settings:"opsz" 24;
+  font-style:italic;font-size:1.0625rem;color:var(--ink);line-height:1.3;
+}
+.bib-card h3{font-size:1.5rem;line-height:1.15;margin-bottom:12px}
+.bib-lede{color:var(--ink-soft);line-height:1.58;margin-bottom:24px;font-size:0.9375rem}
+.bib-card ul{list-style:none}
+.bib-card li{
+  color:var(--ink-mid);font-size:0.875rem;padding-left:20px;
+  position:relative;margin-bottom:10px;line-height:1.5;
+}
+.bib-card li::before{
+  content:"·";position:absolute;left:5px;color:var(--hi-vis);
+  font-weight:700;font-size:1.5em;line-height:1;top:-2px;
+}
+.new-tag{
+  display:inline-block;background:var(--hi-vis);color:white;
+  font-family:'Anton',sans-serif;font-size:10px;letter-spacing:0.16em;
+  padding:3px 8px 1px;border-radius:2px;vertical-align:middle;
+  text-transform:uppercase;margin-left:8px;
+}
+
+/* ============ WHY THIS WORKS ============ */
+.why-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:56px;margin-top:72px;
+}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr;gap:40px}}
+.why-card{padding-top:28px;border-top:2px solid var(--ink)}
+.why-card .why-num{
+  font-family:'Anton',sans-serif;color:var(--hi-vis);
+  font-size:1.625rem;letter-spacing:0.06em;margin-bottom:14px;
+}
+.why-card h3{font-size:1.625rem;line-height:1.1;margin-bottom:16px}
+.why-card p{color:var(--ink-soft);line-height:1.62;font-size:1rem}
+
+/* ============ SELECT ENGAGEMENTS ============ */
+.select-eng .select-card{
+  background:white;border:1px solid var(--rule);border-left:3px solid var(--ink);
+  padding:52px 56px;margin-top:56px;max-width:880px;
+  box-shadow:var(--shadow-card);
+  position:relative;
+  transition:box-shadow 400ms ease;
+}
+.select-eng .select-card:hover{box-shadow:var(--shadow-card-hover)}
+.select-eng .select-card h3{
+  font-size:1.75rem;line-height:1.2;margin-bottom:20px;font-style:italic;
+  font-variation-settings:"opsz" 36;
+}
+.select-eng .select-card p{color:var(--ink-soft);line-height:1.65;font-size:1.0625rem}
+
+/* ============ ABOUT ============ */
+.about-grid{
+  display:grid;grid-template-columns:1.3fr 1fr;gap:80px;margin-top:56px;align-items:start;
+}
+@media(max-width:1000px){.about-grid{grid-template-columns:1fr;gap:48px}}
+.about-body p{
+  font-family:'Fraunces',serif;font-variation-settings:"opsz" 16;font-weight:400;
+  font-size:1.1875rem;color:var(--ink-soft);line-height:1.6;margin-bottom:24px;
+}
+.about-body p strong{color:var(--ink);font-weight:500;font-style:italic}
+.running-note{
+  background:var(--paper-warm);border-left:2.5px solid var(--hi-vis);padding:28px 32px;margin-top:12px;
+}
+.running-note p{
+  margin-bottom:0;font-family:'Fraunces',serif;font-variation-settings:"opsz" 18;
+  font-size:1.125rem;color:var(--ink);line-height:1.55;
+}
+.running-note p em{font-style:italic;color:var(--ink-mid)}
+
+/* Splits chart */
+.splits-card{
+  background:var(--ink);color:var(--paper);padding:36px 32px;position:relative;
+  box-shadow:0 16px 48px -16px rgba(15,15,14,0.25);
+}
+.splits-card .splits-header{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding-bottom:20px;border-bottom:1px solid rgba(251,248,241,0.14);margin-bottom:28px;
+}
+.splits-card .splits-title{
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.22em;
+  text-transform:uppercase;color:rgba(251,248,241,0.55);
+}
+.splits-card .splits-total{font-family:'Anton',sans-serif;font-size:1.25rem;letter-spacing:0.05em;color:var(--hi-vis)}
+.splits-card .splits-week{
+  font-family:'Fraunces',serif;font-variation-settings:"opsz" 28;
+  font-weight:500;font-size:1.375rem;color:var(--paper);margin-bottom:4px;margin-top:-4px;
+}
+.splits-rows{display:flex;flex-direction:column;gap:14px}
+.splits-row{
+  display:grid;grid-template-columns:36px 1fr 80px;gap:14px;align-items:center;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;color:var(--paper);
+}
+.splits-row .day{color:rgba(251,248,241,0.45);text-transform:uppercase}
+.splits-row .bar-track{
+  height:7px;background:rgba(251,248,241,0.07);border-radius:1px;
+  position:relative;overflow:hidden;
+}
+.splits-row .bar-fill{
+  height:100%;background:var(--hi-vis);width:0;
+  transition:width 1500ms cubic-bezier(0.22,1,0.36,1);
+}
+.splits-row.easy .bar-fill{background:rgba(251,248,241,0.65)}
+.splits-row.tempo .bar-fill{background:var(--hi-vis)}
+.splits-row.long .bar-fill{background:#d97138}
+.splits-row.recovery .bar-fill{background:rgba(251,248,241,0.35)}
+.splits-row.rest .bar-track{background:transparent;border-bottom:1px dashed rgba(251,248,241,0.16)}
+.splits-row.intervals .bar-fill{background:var(--hi-vis-deep)}
+.splits-row .miles{text-align:right;color:var(--paper);text-transform:lowercase}
+.splits-row .miles em{color:rgba(251,248,241,0.45);font-style:normal}
+.splits-footer{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:28px;padding-top:20px;border-top:1px solid rgba(251,248,241,0.14);
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.18em;
+  text-transform:uppercase;color:rgba(251,248,241,0.45);
+}
+.splits-footer .legend{display:flex;gap:16px}
+.legend-item{display:flex;align-items:center;gap:6px}
+.legend-dot{width:8px;height:8px;border-radius:1px}
+
+/* ============ FINAL CTA — DARK ============ */
+.final-cta{
+  padding:200px 0;
+  position:relative;
+  background:var(--ink);
+  overflow:hidden;
+}
+/* Hi-vis accent bar top */
+.final-cta::before{
+  content:"";position:absolute;top:0;left:0;width:120px;height:3px;background:var(--hi-vis);
+}
+/* Subtle warm glow in dark */
+.final-cta::after{
+  content:"";position:absolute;
+  top:0;right:-10%;width:60%;height:100%;
+  background:radial-gradient(ellipse at 70% 40%,rgba(200,69,24,0.07) 0%,transparent 65%);
+  pointer-events:none;
+}
+.final-cta .wrap{position:relative;z-index:2}
+.final-grid{
+  display:grid;grid-template-columns:1fr 220px;gap:80px;align-items:center;
+}
+@media(max-width:768px){.final-grid{grid-template-columns:1fr;gap:56px}}
+.final-cta h2.section-title{color:var(--paper)}
+.final-cta .eyebrow{color:rgba(251,248,241,0.4)}
+.final-cta .eyebrow .dash{background:var(--hi-vis)}
+.final-cta .eyebrow .pulse{background:var(--hi-vis)}
+.final-cta p{
+  font-family:'Fraunces',serif;font-variation-settings:"opsz" 16;
+  font-size:1.1875rem;color:rgba(251,248,241,0.72);
+  margin-bottom:44px;max-width:640px;line-height:1.58;
+}
+.final-cta .btn-primary{
+  background:var(--hi-vis);border-color:var(--hi-vis);
+  box-shadow:0 4px 16px -4px rgba(200,69,24,0.35),0 8px 32px -8px rgba(200,69,24,0.2);
+}
+.final-cta .btn-primary:hover{
+  background:var(--hi-vis-deep);border-color:var(--hi-vis-deep);
+  box-shadow:0 6px 20px -4px rgba(168,56,18,0.45),0 12px 40px -8px rgba(168,56,18,0.25);
+}
+
+/* Stopwatch — paper color on dark bg */
+.stopwatch{width:220px;height:220px;position:relative;transition:transform 400ms ease}
+.stopwatch:hover{transform:rotate(-2deg)}
+.stopwatch svg{width:100%;height:100%;color:rgba(251,248,241,0.9)}
+.stopwatch .face-ring{stroke:rgba(251,248,241,0.9)}
+.stopwatch .face-fill{fill:rgba(15,15,14,0.01)}
+.stopwatch .hand-second{
+  transform-origin:110px 124px;
+  animation:tick 60s linear infinite;
+}
+.stopwatch:hover .hand-second{animation-duration:6s}
+@keyframes tick{to{transform:rotate(360deg)}}
+
+/* ============ FOOTER ============ */
+footer{
+  border-top:1px solid rgba(251,248,241,0.12);
+  padding:56px 0 40px;
+  font-size:12px;
+  color:rgba(251,248,241,0.5);
+  background:var(--ink);
+}
+footer .wrap{
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:flex-start;
+}
+footer .foot-left{
+  display:flex;flex-direction:column;gap:8px;
+  font-family:'JetBrains Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;
+}
+footer .foot-left strong{
+  font-family:'Fraunces',serif;font-weight:500;color:rgba(251,248,241,0.9);
+  text-transform:none;font-size:14px;letter-spacing:0;
+}
+footer .foot-right{display:flex;gap:32px;align-items:center}
+footer a{
+  color:rgba(251,248,241,0.5);text-decoration:none;
+  font-family:'JetBrains Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;
+  transition:color 200ms ease;
+}
+footer a:hover{color:rgba(251,248,241,0.9)}
+
+/* ============ SIDE RAIL ============ */
+.side-rail{
+  position:fixed;right:24px;top:50%;transform:translateY(-50%);
+  z-index:100;display:flex;flex-direction:column;gap:14px;
+  pointer-events:none;opacity:0;transition:opacity 600ms ease;
+}
+.side-rail.visible{opacity:1}
+.side-rail .rail-item{width:24px;height:1px;background:var(--ink-faint);transition:width 240ms ease,background 240ms ease}
+.side-rail .rail-item.active{width:40px;background:var(--hi-vis)}
+@media(max-width:768px){.side-rail{display:none}}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:768px){
+  h1.display{font-size:clamp(3rem,15vw,5rem)}
+  h2.section-title{font-size:clamp(2rem,8vw,3rem)}
+  .spec-card{padding:40px 32px 36px}
+  .bib-inner{padding:36px 32px 48px}
+  .bib-num{font-size:3.75rem}
+  .select-eng .select-card{padding:36px 32px}
+  .final-cta{padding:140px 0}
+  footer .foot-right{flex-direction:column;align-items:flex-start;gap:16px}
+}
+</style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<header class="nav-wrap">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Eli Bergman</a>
-    <nav class="nav-links">
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html" class="nav-cta">Book a Call</a>
-    </nav>
-    <button class="hamburger" id="menu-toggle" aria-label="Open menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="13" x2="21" y2="13"/><line x1="3" y1="19" x2="21" y2="19"/>
-      </svg>
-    </button>
-  </div>
-  <div id="mobile-menu">
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" style="color:#67dfff; font-weight:600;">Book a Call</a>
-  </div>
-</header>
+<!-- ============ GRAIN OVERLAY ============ -->
+<div class="grain-overlay" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+    <filter id="grain-filter" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain-filter)" opacity="0.06"/>
+  </svg>
+</div>
 
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <p class="hero-label">Water Technology Marketing</p>
-      <h1>Most water technology companies have great technology and weak go-to-market.</h1>
-      <p>I help water tech founders selling to industries and consumers turn that around. Sharper positioning, better marketing, more pipeline. Built by an engineer who knows the industry from the inside.</p>
-      <div class="hero-btns">
-        <a href="contact.html" class="btn-orange">Book a 30-Minute Intro Call</a>
-        <a href="services.html" class="btn-outline-white">See How I Work</a>
-      </div>
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+      <div class="brand-name">Eli Bergman</div>
+      <div class="brand-bib">ELB · 01</div>
+    </a>
+    <div class="nav-links">
+      <a href="#specialties">Specialties</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
     </div>
-    <div class="hero-img">
-      <img src="assets/photos/1716468129292.jpeg" alt="Eli Bergman at Aquaculture Philippines 2024" />
-      <div class="hero-img-overlay"></div>
+    <div class="nav-right">
+      <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/eli-bergman52/30min'});return false;" class="nav-cta">Book a call</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+</nav>
 
-  <!-- Wave bottom: teal to white -->
-  <div class="wave">
-    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:90px;">
-      <path d="M0,45 C180,90 360,0 540,45 C720,90 900,0 1080,45 C1260,90 1350,20 1440,45 L1440,90 L0,90 Z" fill="#ffffff"/>
+<!-- ============ MOBILE DRAWER ============ -->
+<div id="mobileDrawer" aria-hidden="true">
+  <div class="drawer-brand">Eli Bergman</div>
+  <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
+  </button>
+  <a href="#specialties" class="drawer-link">Specialties</a>
+  <a href="#services" class="drawer-link">Services</a>
+  <a href="#about" class="drawer-link">About</a>
+  <div class="drawer-cta-row">
+    <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/eli-bergman52/30min'});return false;" class="drawer-cta">
+      Book a 30-minute call
+      <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+        <path d="M3,7 L11,7 M7,3 L11,7 L7,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <!-- Route map across bottom -->
+  <svg class="hero-route" viewBox="0 0 1600 280" preserveAspectRatio="none" aria-hidden="true">
+    <line class="route-baseline" x1="0" y1="248" x2="1600" y2="248"/>
+    <path class="route-contour" d="M-30,228 C180,222 280,212 420,202 S620,190 800,178 S980,168 1140,158 S1340,148 1630,140"/>
+    <path class="route-contour" d="M-30,248 C200,244 320,238 480,232 S680,222 860,212 S1040,204 1200,196 S1400,186 1630,180"/>
+    <path class="route-line" d="M-20,180 C100,170 180,110 260,90 S380,82 460,98 S600,52 700,78 S820,138 920,108 S1060,42 1160,60 S1300,148 1400,118 S1560,98 1620,128"/>
+    <line x1="-5" y1="240" x2="-5" y2="258" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+    <text class="start-finish" x="10" y="272">START</text>
+    <circle class="mile-pin pin-1" cx="260" cy="90" r="4"/>
+    <text class="mile-tick pin-1" x="260" y="76" text-anchor="middle">M1</text>
+    <circle class="mile-pin pin-2" cx="460" cy="98" r="4"/>
+    <text class="mile-tick pin-2" x="460" y="84" text-anchor="middle">M2</text>
+    <circle class="mile-pin-active pin-3" cx="700" cy="78" r="5"/>
+    <text class="mile-tick pin-3" x="700" y="62" text-anchor="middle">M3</text>
+    <circle class="mile-pin pin-4" cx="920" cy="108" r="4"/>
+    <text class="mile-tick pin-4" x="920" y="94" text-anchor="middle">M4</text>
+    <circle class="mile-pin-active pin-5" cx="1160" cy="60" r="5"/>
+    <text class="mile-tick pin-5" x="1160" y="44" text-anchor="middle">M5</text>
+    <circle class="mile-pin pin-6" cx="1400" cy="118" r="4"/>
+    <text class="mile-tick pin-6" x="1400" y="104" text-anchor="middle">M6</text>
+    <line x1="1595" y1="240" x2="1595" y2="258" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+    <text class="start-finish" x="1525" y="272">FINISH</text>
+  </svg>
+
+  <div class="wrap">
+    <div class="hero-meta">
+      <div class="hero-meta-item accent">Vol. 01</div>
+      <div class="hero-meta-rule"></div>
+      <div class="hero-meta-item">Marketing &amp; AI Automation</div>
+      <div class="hero-meta-rule"></div>
+      <div class="hero-meta-item">For SMBs</div>
+    </div>
+
+    <h1 class="display" data-pretext>Bring me in<br>when it's time<br>to run.</h1>
+
+    <p class="hero-sub">I'm an engineer turned marketing consultant. Founders bring me in when they're done planning and ready to put real miles on the road. <strong>Water tech</strong> is the course I know best. <strong>AI automation</strong> is the training advantage I bring to every engagement.</p>
+
+    <div class="cta-row">
+      <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/eli-bergman52/30min'});return false;" class="btn btn-primary">
+        Book a 30-minute call
+        <svg class="btn-icon" viewBox="0 0 14 14" fill="none">
+          <path d="M3,7 L11,7 M7,3 L11,7 L7,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="#services" class="btn btn-secondary">See how I work</a>
+    </div>
+    <div class="micro">Selective engagements outside my specialties, when the pace matches.</div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="line"></div>
   </div>
 </section>
 
+<div class="section-divider padded"></div>
 
-<!-- THE PROBLEM -->
-<section class="section" style="padding-top: 60px;">
-  <div class="section-inner">
-    <div class="two-col fade-in">
-      <div class="two-col-img">
-        <img src="assets/photos/1765455040310.jpeg" alt="Eli Bergman in conversation at a waterway site" style="object-position: center;" />
+<!-- ============ PATTERN ============ -->
+<section class="block pattern reveal" data-rail="01">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="dash"></span>
+      <span class="pulse"></span>
+      Mile 01 / The Pattern
+    </div>
+    <h2 class="section-title">This is what I see.</h2>
+    <div class="pattern-body">
+      <div class="pattern-aside">
+        Observed across<br>
+        ~40 founders<br>
+        — 2023–2026
       </div>
       <div>
-        <p class="section-label">The problem</p>
-        <h2 class="section-h2">The pattern is familiar.</h2>
-        <p style="margin-bottom:18px; font-size:1rem; line-height:1.8;">
-          You built something real. The technology works. Early customers are happy. But growth is slow, and the marketing isn't pulling its weight.
-        </p>
-        <p style="margin-bottom:18px; font-size:1rem; line-height:1.8;">
-          The website reads like a spec sheet. The messaging makes sense to engineers and no one else. The sales cycle drags because the wrong people are reading the wrong content. You've tried agencies, but they don't understand water. You've tried freelancers, but they need too much hand-holding.
-        </p>
-        <p style="font-size:1.0625rem; font-weight:600; color:#003e51; line-height:1.6;">
-          That's the gap I close.
-        </p>
+        <p>You've built something real. The product works. Early customers are sticking. But the marketing isn't keeping pace with what you've built. Pipeline is thin, the website reads like an internal doc, and the messaging makes sense to your team and no one else.</p>
+        <p>You've tried agencies. They don't know your course. You've tried freelancers. They can't hold the pace. The budget keeps growing and the splits aren't getting faster.</p>
+        <div class="closing">That's where I come in.</div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- WHO I WORK WITH -->
-<section class="section" style="background: #f5f5f5; padding: 64px 24px;">
-  <div class="section-inner">
-    <p class="section-label fade-in">Fit</p>
-    <h2 class="section-h2 fade-in" style="margin-bottom:40px;">Who I work with.</h2>
-    <div class="fit-card fit-card--yes fade-in" style="max-width:720px;">
-      <p class="fit-card-label">Built for</p>
-      <ul>
-        <li>
-          <span class="check check-yes"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span>Water technology companies selling to <strong>industrial buyers</strong> — food and beverage, manufacturing, agriculture, commercial real estate, hospitality.</span>
-        </li>
-        <li>
-          <span class="check check-yes"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span>Companies selling to <strong>consumers and property owners</strong> — residential filtration, septic, water quality, smart water tech.</span>
-        </li>
-        <li>
-          <span class="check check-yes"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span>Founders and growth leaders who want a <strong>marketing partner who actually understands the technology and the buyer</strong>.</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Wave: white to dark for services -->
-<div class="wave" style="background:#f5f5f5;">
-  <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:80px;">
-    <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,40 L1440,80 L0,80 Z" fill="#003e51"/>
+<!-- ============ TRACK SHIFT ============ -->
+<section class="track-shift reveal" id="track-shift" aria-hidden="true">
+  <svg viewBox="0 0 1600 280" preserveAspectRatio="xMidYMid slice">
+    <path class="ts-line" d="
+      M 0 220 C 220 215, 380 200, 520 175
+      C 660 150, 760 130, 860 120
+      L 920 120
+      M 920 120 C 1040 110, 1180 70, 1320 50 C 1420 38, 1500 32, 1600 30
+      M 920 120 C 1040 130, 1180 175, 1320 210 C 1420 232, 1500 246, 1600 250
+    "/>
+    <circle class="ts-pin" cx="920" cy="120" r="6"/>
+    <text class="ts-label" x="924" y="108">Split</text>
+    <circle class="ts-pin" cx="1580" cy="30" r="4"/>
+    <text class="ts-label" x="1500" y="22">Water Tech →</text>
+    <circle class="ts-pin" cx="1580" cy="250" r="4"/>
+    <text class="ts-label" x="1494" y="268">AI Automation →</text>
   </svg>
-</div>
+</section>
 
-
-<!-- SERVICES -->
-<section style="background: linear-gradient(180deg, #003e51 0%, #005f7d 100%); padding: 64px 24px 80px;">
-  <div class="section-inner">
-    <p class="section-label fade-in" style="color: #67dfff;">Services</p>
-    <h2 class="section-h2 fade-in" style="color: #fff; margin-bottom: 40px;">How I help.</h2>
-    <div class="service-cards">
-      <div class="service-card fade-in">
-        <h3>Marketing Foundation Build</h3>
-        <p>A complete reset of how your company looks, sounds, and shows up.</p>
-        <ul>
-          <li>ICP definition and buyer personas</li>
-          <li>Positioning and messaging framework</li>
-          <li>Website rebuild with conversion-focused copy</li>
-          <li>Cornerstone content and brand assets</li>
-        </ul>
-        <a href="services.html#foundation">Learn More &rarr;</a>
-      </div>
-      <div class="service-card fade-in fade-delay-1">
-        <h3>Demand Generation Sprint</h3>
-        <p>A focused engagement to put your company in front of the right buyers, consistently.</p>
-        <ul>
-          <li>Target list building and audience definition</li>
-          <li>Cold email infrastructure and outbound sequences</li>
-          <li>Landing pages built to convert</li>
-          <li>Optional paid campaigns on LinkedIn or Meta</li>
-        </ul>
-        <a href="services.html#demand-gen">Learn More &rarr;</a>
-      </div>
-      <div class="service-card fade-in fade-delay-2">
-        <h3>Fractional Marketing Lead</h3>
-        <p>Ongoing marketing leadership for companies not ready to hire in-house.</p>
-        <ul>
-          <li>Weekly strategy and execution</li>
-          <li>Content production and campaign management</li>
-          <li>Marketing automation and AI workflow buildout</li>
-          <li>Quarterly strategy reviews</li>
-        </ul>
-        <a href="services.html#fractional">Learn More &rarr;</a>
-      </div>
+<!-- ============ SPECIALTIES ============ -->
+<section class="block specialties reveal" id="specialties" data-rail="02">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="dash"></span>
+      <span class="pulse"></span>
+      Mile 02 / Specialties
     </div>
-  </div>
-</section>
+    <h2 class="section-title">Two courses<br>I know cold.</h2>
+    <p style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 18;font-size:1.25rem;color:var(--ink-soft);max-width:740px;line-height:1.55;font-style:italic;">One is the industry I came up in. The other is the training advantage I bring everywhere. Both run on the same operator philosophy. If it doesn't move the splits, it doesn't make the plan.</p>
 
-<!-- Wave: dark to white -->
-<div class="wave" style="background: #005f7d;">
-  <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:80px;">
-    <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1380,60 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-  </svg>
-</div>
-
-
-<!-- WHY ENGINEER-LED -->
-<section class="section">
-  <div class="section-inner">
-    <p class="section-label fade-in">The advantage</p>
-    <h2 class="section-h2 fade-in" style="margin-bottom: 48px;">Why this works.</h2>
-    <div class="why-cols">
-      <div class="why-item fade-in">
-        <h3>I speak the buyer's language.</h3>
-        <p>I've sat across the desk from operators, engineers, and industrial buyers. I know what they read, what they trust, and what makes them tune out in the first ten seconds.</p>
-      </div>
-      <div class="why-item fade-in fade-delay-1">
-        <h3>I translate technical into commercial.</h3>
-        <p>Most marketers can't explain why your technology matters. I can, in language non-technical decision makers act on. No jargon. No dumbing down. Just clarity.</p>
-      </div>
-      <div class="why-item fade-in fade-delay-2">
-        <h3>I think like an operator.</h3>
-        <p>Every recommendation ties back to pipeline, revenue, and ROI. No marketing for marketing's sake. If it doesn't move a number, it doesn't make the list.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SELECTED WORK placeholder -->
-<section class="section" style="background: #f5f5f5; padding: 64px 24px;">
-  <div class="section-inner">
-    <p class="section-label fade-in">Work</p>
-    <h2 class="section-h2 fade-in" style="margin-bottom: 32px;">Selected work.</h2>
-    <!-- Logos / testimonials / case studies go here -->
-    <div class="proof-placeholder fade-in">Case studies and client work coming soon.</div>
-  </div>
-</section>
-
-<!-- Wave: gray to dark for about-preview bg -->
-<div class="wave" style="background: #f5f5f5;">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
-    <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
-  </svg>
-</div>
-
-
-<!-- ABOUT PREVIEW -->
-<section class="section" style="padding-top: 0;">
-  <div class="section-inner">
-    <div class="two-col fade-in" style="gap: 56px;">
-      <div style="display:flex; justify-content:center; align-items:center;">
-        <div style="position:relative;">
-          <img src="assets/photos/20251111_093441.jpg" alt="Eli Bergman at WaterEdge.IL conference" class="about-photo" />
-          <div style="position:absolute; inset:-8px; border-radius:50%; border:2px solid #007da3; opacity:0.25; pointer-events:none;"></div>
+    <div class="specialties-grid">
+      <!-- WATER TECH -->
+      <div class="spec-card water-card reveal reveal-d1">
+        <svg class="spec-pattern" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,540 Q50,520 100,540 T200,540 T300,540 T400,540" stroke="currentColor" stroke-width="1" fill="none" opacity="0.45"/>
+          <path d="M0,558 Q50,538 100,558 T200,558 T300,558 T400,558" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
+          <path d="M0,576 Q50,556 100,576 T200,576 T300,576 T400,576" stroke="currentColor" stroke-width="1" fill="none" opacity="0.18"/>
+          <path d="M0,522 Q60,504 120,522 T240,522 T360,522 T480,522" stroke="currentColor" stroke-width="0.75" fill="none" opacity="0.35"/>
+          <line x1="0" y1="510" x2="400" y2="510" stroke="currentColor" stroke-width="0.5" opacity="0.1" stroke-dasharray="2 5"/>
+        </svg>
+        <div class="spec-card-body">
+          <div class="spec-tag">01 / Industry Specialty</div>
+          <h3>Water<br>Technology</h3>
+          <div class="spec-sub">The course I came up on.</div>
+          <p>I'm a water and wastewater engineer. Years on the ground designing treatment systems and leading implementations across the US and Israel. I know how plant operators, industrial buyers, and engineers actually think: what they read, what they trust, what makes them tune out at mile one. If you're building water tech, I'm the marketer who already knows the terrain.</p>
         </div>
       </div>
-      <div>
-        <p class="section-label">About</p>
-        <h2 class="section-h2">About Eli.</h2>
-        <p style="font-size:1rem; line-height:1.8; margin-bottom:16px;">
-          I'm a water and wastewater engineer turned marketing consultant. After years designing treatment systems and leading implementations across the US and Israel, I noticed the same pattern across the industry: great technology, weak marketing.
-        </p>
-        <p style="font-size:1rem; line-height:1.8; margin-bottom:28px;">
-          I started this practice to fix that for the companies worth fixing.
-        </p>
-        <a href="about.html" class="btn-blue">Read More</a>
+
+      <!-- AI -->
+      <div class="spec-card ai-card reveal reveal-d2">
+        <svg class="spec-pattern" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <pattern id="dotgrid" width="22" height="22" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="0.9" fill="currentColor" opacity="0.3"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dotgrid)"/>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0.8">
+            <circle cx="46" cy="488" r="2.5"/>
+            <circle cx="112" cy="488" r="2.5"/>
+            <circle cx="112" cy="554" r="2.5"/>
+            <line x1="46" y1="488" x2="112" y2="488" opacity="0.5"/>
+            <line x1="112" y1="488" x2="112" y2="554" opacity="0.5"/>
+            <circle cx="200" cy="510" r="3.5" fill="var(--hi-vis)" stroke="var(--hi-vis)"/>
+            <circle cx="244" cy="510" r="2.5"/>
+            <circle cx="244" cy="466" r="2.5"/>
+            <line x1="200" y1="510" x2="244" y2="510" opacity="0.5"/>
+            <line x1="244" y1="510" x2="244" y2="466" opacity="0.5"/>
+            <circle cx="332" cy="554" r="2.5"/>
+            <circle cx="332" cy="488" r="2.5"/>
+            <circle cx="376" cy="488" r="3.5" fill="var(--hi-vis)" stroke="var(--hi-vis)"/>
+            <line x1="332" y1="554" x2="332" y2="488" opacity="0.5"/>
+            <line x1="332" y1="488" x2="376" y2="488" opacity="0.5"/>
+          </g>
+        </svg>
+        <div class="spec-card-body">
+          <div class="spec-tag">02 / Capability Specialty</div>
+          <h3>AI<br>Automation</h3>
+          <div class="spec-sub">The training advantage.</div>
+          <p>Most marketing is still running on pre-AI form. I build AI systems that take the repetitive work off your team: outbound that actually personalizes, content engines that don't sound generated, lead routing and follow-up that closes the gap. Not AI for show. AI as the leverage that lets a small team run like a big one.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- FINAL CTA -->
-<div class="wave" style="background: #fff;">
-  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px;">
-    <path d="M0,35 C360,70 720,0 1080,35 C1260,52 1380,15 1440,35 L1440,70 L0,70 Z" fill="#003e51"/>
+<div class="section-divider padded">
+  <svg viewBox="0 0 80 16" fill="none" aria-hidden="true">
+    <path d="M0,12 C10,12 14,4 24,4 S38,12 48,12 S62,4 72,4 L80,4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="24" cy="4" r="2" fill="currentColor"/>
+    <circle cx="48" cy="12" r="2" fill="currentColor"/>
+    <circle cx="72" cy="4" r="2" fill="currentColor"/>
   </svg>
 </div>
-<section class="dark-section">
-  <div class="dark-section-inner fade-in">
-    <h2>Let's talk.</h2>
-    <p>30 minutes. No pitch deck, no pressure. We'll figure out if there's a fit.</p>
-    <a href="contact.html" class="btn-orange">Book a 30-Minute Intro Call</a>
+
+<!-- ============ SERVICES — RACE BIBS ============ -->
+<section class="block services reveal" id="services" data-rail="03">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="dash"></span>
+      <span class="pulse"></span>
+      Mile 03 / What I Build
+    </div>
+    <h2 class="section-title">Four ways<br>to start running.</h2>
+    <p style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 18;font-size:1.25rem;color:var(--ink-soft);max-width:740px;line-height:1.55;font-style:italic;">Custom on the inside, predictable on the outside. Pick the distance that fits where you are. I'll tell you on the intro call if I'd recommend a different one.</p>
+
+    <div class="services-grid">
+      <div class="bib-card reveal reveal-d1">
+        <div class="bib-pin tl"></div><div class="bib-pin tr"></div>
+        <div class="timing-chip">ELB-01 · Timing Chip</div>
+        <div class="bib-inner">
+          <div class="bib-top">
+            <div class="bib-num">01</div>
+            <div class="bib-label-block">
+              <div class="bib-label">The Base</div>
+              <div class="bib-tagline">Before you can run faster, you need a base.</div>
+            </div>
+          </div>
+          <h3>Marketing Foundation Build</h3>
+          <p class="bib-lede">A complete reset of how your company looks, sounds, and shows up. The foundation everything else compounds on.</p>
+          <ul>
+            <li>ICP definition and buyer personas</li>
+            <li>Positioning and messaging framework</li>
+            <li>Website rebuild with conversion-focused copy</li>
+            <li>Cornerstone content and brand assets</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bib-card reveal reveal-d2">
+        <div class="bib-pin tl"></div><div class="bib-pin tr"></div>
+        <div class="timing-chip">ELB-02 · Timing Chip</div>
+        <div class="bib-inner">
+          <div class="bib-top">
+            <div class="bib-num">02</div>
+            <div class="bib-label-block">
+              <div class="bib-label">The 5K</div>
+              <div class="bib-tagline">Short distance. Real speed.</div>
+            </div>
+          </div>
+          <h3>Demand Generation Sprint</h3>
+          <p class="bib-lede">A focused engagement to put your company in front of the right buyers, consistently. Designed to put miles on the board quickly.</p>
+          <ul>
+            <li>Target list building and audience definition</li>
+            <li>Cold email infrastructure and outbound sequences</li>
+            <li>Landing pages built to convert</li>
+            <li>Optional paid campaigns on LinkedIn or Meta</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bib-card reveal reveal-d3">
+        <div class="bib-pin tl"></div><div class="bib-pin tr"></div>
+        <div class="timing-chip">ELB-03 · Timing Chip</div>
+        <div class="bib-inner">
+          <div class="bib-top">
+            <div class="bib-num">03</div>
+            <div class="bib-label-block">
+              <div class="bib-label">The Long Run</div>
+              <div class="bib-tagline">Consistency that compounds.</div>
+            </div>
+          </div>
+          <h3>Fractional Marketing Lead</h3>
+          <p class="bib-lede">Ongoing marketing leadership for companies not ready for a full hire. The discipline of showing up every week. For months, not weeks.</p>
+          <ul>
+            <li>Weekly strategy and execution</li>
+            <li>Content production and campaign management</li>
+            <li>Marketing automation</li>
+            <li>Quarterly strategy reviews</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bib-card featured reveal reveal-d4">
+        <div class="bib-pin tl"></div><div class="bib-pin tr"></div>
+        <div class="timing-chip">ELB-04 · Timing Chip</div>
+        <div class="bib-inner">
+          <div class="bib-top">
+            <div class="bib-num">04</div>
+            <div class="bib-label-block">
+              <div class="bib-label">The Training Advantage <span class="new-tag">New</span></div>
+              <div class="bib-tagline">The tech in the kit.</div>
+            </div>
+          </div>
+          <h3>AI Automation Buildout</h3>
+          <p class="bib-lede">Custom AI systems built into your existing stack. The leverage that lets a small team run like a big one.</p>
+          <ul>
+            <li>Inbound and outbound automation (lead routing, sequences, follow-up)</li>
+            <li>Content production engines (without sounding like ChatGPT)</li>
+            <li>Internal ops automation (CRM hygiene, reporting, handoffs)</li>
+            <li>Agentic workflows tailored to how your team actually works</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<div class="section-divider padded"></div>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">Eli Bergman</div>
-      <div class="footer-meta">&copy; 2025 Bergman Water Marketing</div>
+<!-- ============ WHY THIS WORKS ============ -->
+<section class="block why reveal" data-rail="04">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="dash"></span>
+      <span class="pulse"></span>
+      Mile 04 / The Advantage
     </div>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/eli-bergman/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:eli@elibergman.com">eli@elibergman.com</a>
+    <h2 class="section-title">Why this works.</h2>
+    <div class="why-grid">
+      <div class="why-card reveal reveal-d1">
+        <div class="why-num">01</div>
+        <h3>I think like an operator.</h3>
+        <p>Every recommendation ties back to pipeline, revenue, and ROI. No marketing for marketing's sake. If it doesn't move the splits, it doesn't make the plan.</p>
+      </div>
+      <div class="why-card reveal reveal-d2">
+        <div class="why-num">02</div>
+        <h3>I run the workout with you.</h3>
+        <p>Most consultants hand you a training plan and disappear. I run it with you: the website, the campaign, the AI workflow. Strategy and execution from one person responsible for both.</p>
+      </div>
+      <div class="why-card reveal reveal-d3">
+        <div class="why-num">03</div>
+        <h3>AI where it actually pays.</h3>
+        <p>AI is the difference between training hard and training smart. I know where it compounds your output and where it's just noise. You'll get AI in the right places, not sprinkled on top because the deck looked thin.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider padded">
+  <svg viewBox="0 0 80 16" fill="none" aria-hidden="true">
+    <path d="M0,8 L80,8" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6"/>
+    <circle cx="40" cy="8" r="2.5" fill="currentColor"/>
+  </svg>
+</div>
+
+<!-- ============ SELECT ENGAGEMENTS ============ -->
+<section class="block select-eng reveal" data-rail="05">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="dash"></span>
+      <span class="pulse"></span>
+      Mile 05 / Select Engagements
+    </div>
+    <h2 class="section-title">Sometimes I pace<br>other runners.</h2>
+    <div class="select-card reveal reveal-d1">
+      <h3>If the way I think about marketing matches your pace, we can probably still work.</h3>
+      <p>I'm open to selective engagements outside water tech and AI automation when there's a clear fit: a sharp founder, a real product, and a working style that matches mine. Same productized tracks apply. If you're not sure whether it'd fit, the intro call is the place to find out.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider padded"></div>
+
+<!-- ============ ABOUT ============ -->
+<section class="block about reveal" id="about" data-rail="06">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="dash"></span>
+      <span class="pulse"></span>
+      Mile 06 / About
+    </div>
+    <h2 class="section-title">About Eli.</h2>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>I'm a <strong>water and wastewater engineer turned marketing consultant</strong>. After years designing treatment systems and leading implementations across the US and Israel, I noticed the same pattern across the industry, and frankly across most B2B: great products, weak go-to-market.</p>
+        <p>I started this practice to fix that for the companies worth fixing. Along the way I got obsessive about AI. Once you've seen how much of marketing is repetitive work, you stop being able to unsee it. That combination, <strong>an engineer's bias toward systems plus AI as the tool to actually build them</strong>, is what I bring to every engagement.</p>
+        <div class="running-note reveal reveal-d2">
+          <p>I also run. Not professionally. Just consistently. The same disciplines apply: <em>show up, build a base, train the right system, trust the compounding.</em> That's how I run marketing too.</p>
+        </div>
+      </div>
+
+      <div class="splits-card reveal reveal-d3">
+        <div class="splits-header">
+          <div>
+            <div class="splits-title">Training Log</div>
+            <div class="splits-week">Last Week</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="splits-title">Volume</div>
+            <div class="splits-total">36 MI</div>
+          </div>
+        </div>
+        <div class="splits-rows">
+          <div class="splits-row easy">
+            <span class="day">Mon</span>
+            <div class="bar-track"><div class="bar-fill" data-w="35%"></div></div>
+            <span class="miles">4 mi <em>easy</em></span>
+          </div>
+          <div class="splits-row tempo">
+            <span class="day">Tue</span>
+            <div class="bar-track"><div class="bar-fill" data-w="55%"></div></div>
+            <span class="miles">6 mi <em>tempo</em></span>
+          </div>
+          <div class="splits-row recovery">
+            <span class="day">Wed</span>
+            <div class="bar-track"><div class="bar-fill" data-w="18%"></div></div>
+            <span class="miles">2 mi <em>recovery</em></span>
+          </div>
+          <div class="splits-row easy">
+            <span class="day">Thu</span>
+            <div class="bar-track"><div class="bar-fill" data-w="75%"></div></div>
+            <span class="miles">8 mi <em>easy</em></span>
+          </div>
+          <div class="splits-row rest">
+            <span class="day">Fri</span>
+            <div class="bar-track"></div>
+            <span class="miles"><em>rest</em></span>
+          </div>
+          <div class="splits-row long">
+            <span class="day">Sat</span>
+            <div class="bar-track"><div class="bar-fill" data-w="95%"></div></div>
+            <span class="miles">10 mi <em>long</em></span>
+          </div>
+          <div class="splits-row easy">
+            <span class="day">Sun</span>
+            <div class="bar-track"><div class="bar-fill" data-w="55%"></div></div>
+            <span class="miles">6 mi <em>easy</em></span>
+          </div>
+        </div>
+        <div class="splits-footer">
+          <div class="legend">
+            <div class="legend-item"><div class="legend-dot" style="background:var(--hi-vis)"></div>Tempo</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#d97138"></div>Long</div>
+            <div class="legend-item"><div class="legend-dot" style="background:rgba(251,248,241,0.65)"></div>Easy</div>
+          </div>
+          <div>Sample Week</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA — DARK ============ -->
+<section class="final-cta reveal" id="contact" data-rail="07">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="dash"></span>
+      <span class="pulse"></span>
+      Finish / Let's Talk
+    </div>
+    <div class="final-grid">
+      <div>
+        <h2 class="section-title">30 minutes.<br>No deck. No pressure.</h2>
+        <p>We'll talk through where you are, what would actually move the splits, and whether we'd run well together. If not, I'll point you at someone better suited.</p>
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/eli-bergman52/30min'});return false;" class="btn btn-primary">
+          Start the clock
+          <svg class="btn-icon" viewBox="0 0 14 14" fill="none">
+            <path d="M3,7 L11,7 M7,3 L11,7 L7,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="stopwatch">
+        <svg viewBox="0 0 220 240" aria-hidden="true">
+          <rect x="104" y="4" width="12" height="10" rx="2" fill="currentColor"/>
+          <rect x="98" y="12" width="24" height="14" rx="3" fill="currentColor"/>
+          <line x1="110" y1="26" x2="110" y2="32" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="110" cy="124" r="90" fill="rgba(15,15,14,0.02)" stroke="currentColor" stroke-width="2.5"/>
+          <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="110" y1="42" x2="110" y2="52"/>
+            <line x1="192" y1="124" x2="182" y2="124"/>
+            <line x1="110" y1="206" x2="110" y2="196"/>
+            <line x1="28" y1="124" x2="38" y2="124"/>
+          </g>
+          <g stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.35">
+            <line x1="151" y1="53" x2="148" y2="58"/>
+            <line x1="181" y1="83" x2="176" y2="86"/>
+            <line x1="181" y1="165" x2="176" y2="162"/>
+            <line x1="151" y1="195" x2="148" y2="190"/>
+            <line x1="69" y1="195" x2="72" y2="190"/>
+            <line x1="39" y1="165" x2="44" y2="162"/>
+            <line x1="39" y1="83" x2="44" y2="86"/>
+            <line x1="69" y1="53" x2="72" y2="58"/>
+          </g>
+          <circle cx="110" cy="124" r="3.5" fill="currentColor"/>
+          <line x1="110" y1="124" x2="110" y2="64" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="hand-second"/>
+          <text x="110" y="160" text-anchor="middle" font-family="JetBrains Mono" font-size="7" letter-spacing="2" fill="currentColor" opacity="0.35">ELB · TIMER</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-left">
+      <strong>Eli Bergman</strong>
+      <div>Marketing &amp; AI Automation</div>
+      <div>For SMBs in the AI era</div>
+    </div>
+    <div class="foot-right">
+      <a href="https://www.linkedin.com/in/elibergman/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:eli@elibergman.com">Email</a>
     </div>
   </div>
 </footer>
 
+<!-- ============ SIDE RAIL ============ -->
+<div class="side-rail" id="sideRail">
+  <div class="rail-item" data-section="01"></div>
+  <div class="rail-item" data-section="02"></div>
+  <div class="rail-item" data-section="03"></div>
+  <div class="rail-item" data-section="04"></div>
+  <div class="rail-item" data-section="05"></div>
+  <div class="rail-item" data-section="06"></div>
+  <div class="rail-item" data-section="07"></div>
+</div>
 
+<!-- ============ PRETEXT VENDOR ============ -->
 <script>
-  // Mobile menu
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('mobile-menu');
-  toggle.addEventListener('click', () => menu.classList.toggle('open'));
-
-  // Fade-in on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+var x0=["BN","BN","BN","BN","BN","BN","BN","BN","BN","S","B","S","WS","B","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","B","B","B","S","WS","ON","ON","ET","ET","ET","ON","ON","ON","ON","ON","ON","CS","ON","CS","ON","EN","EN","EN","EN","EN","EN","EN","EN","EN","EN","ON","ON","ON","ON","ON","ON","ON","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","ON","ON","ON","ON","ON","ON","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","ON","ON","ON","ON","BN","BN","BN","BN","BN","BN","B","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","CS","ON","ET","ET","ET","ET","ON","ON","ON","ON","L","ON","ON","ON","ON","ON","ET","ET","EN","EN","ON","L","ON","ON","ON","EN","L","ON","ON","ON","ON","ON","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","ON","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","ON","L","L","L","L","L","L","L","L"],g0=["AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","CS","AL","ON","ON","NSM","NSM","NSM","NSM","NSM","NSM","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","AL","AL","AL","AL","AL","AL","AL","AN","AN","AN","AN","AN","AN","AN","AN","AN","AN","ET","AN","AN","AL","AL","AL","NSM","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","ON","NSM","NSM","NSM","NSM","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL"];function m0(O){if(O<=255)return x0[O];if(1424<=O&&O<=1524)return"R";if(1536<=O&&O<=1791)return g0[O&255];if(1792<=O&&O<=2220)return"AL";return"L"}function r0(O){let _=O.length;if(_===0)return null;let J=Array(_),Y=0;for(let V=0;V<_;V++){let $=m0(O.charCodeAt(V));if($==="R"||$==="AL"||$==="AN")Y++;J[V]=$}if(Y===0)return null;let X=_/Y<0.3?0:1,R=new Int8Array(_);for(let V=0;V<_;V++)R[V]=X;let Z=X&1?"R":"L",Q=Z,f=Q;for(let V=0;V<_;V++)if(J[V]==="NSM")J[V]=f;else f=J[V];f=Q;for(let V=0;V<_;V++){let $=J[V];if($==="EN")J[V]=f==="AL"?"AN":"EN";else if($==="R"||$==="L"||$==="AL")f=$}for(let V=0;V<_;V++)if(J[V]==="AL")J[V]="R";for(let V=1;V<_-1;V++){if(J[V]==="ES"&&J[V-1]==="EN"&&J[V+1]==="EN")J[V]="EN";if(J[V]==="CS"&&(J[V-1]==="EN"||J[V-1]==="AN")&&J[V+1]===J[V-1])J[V]=J[V-1]}for(let V=0;V<_;V++){if(J[V]!=="EN")continue;let $;for($=V-1;$>=0&&J[$]==="ET";$--)J[$]="EN";for($=V+1;$<_&&J[$]==="ET";$++)J[$]="EN"}for(let V=0;V<_;V++){let $=J[V];if($==="WS"||$==="ES"||$==="ET"||$==="CS")J[V]="ON"}f=Q;for(let V=0;V<_;V++){let $=J[V];if($==="EN")J[V]=f==="L"?"L":"EN";else if($==="R"||$==="L")f=$}for(let V=0;V<_;V++){if(J[V]!=="ON")continue;let $=V+1;while($<_&&J[$]==="ON")$++;let u=V>0?J[V-1]:Q,q=$<_?J[$]:Q,D=u!=="L"?"R":"L";if(D===(q!=="L"?"R":"L"))for(let K=V;K<$;K++)J[K]=D;V=$-1}for(let V=0;V<_;V++)if(J[V]==="ON")J[V]=Z;for(let V=0;V<_;V++){let $=J[V];if((R[V]&1)===0){if($==="R")R[V]++;else if($==="AN"||$==="EN")R[V]+=2}else if($==="L"||$==="AN"||$==="EN")R[V]++}return R}function u0(O,_){let J=r0(O);if(J===null)return null;let Y=new Int8Array(_.length);for(let X=0;X<_.length;X++)Y[X]=J[_[X]];return Y}var a0=/[ \t\n\r\f]+/g,s0=/[\t\n\r\f]| {2,}|^ | $/;function d0(O){let _=O??"normal";return _==="pre-wrap"?{mode:_,preserveOrdinarySpaces:!0,preserveHardBreaks:!0}:{mode:_,preserveOrdinarySpaces:!1,preserveHardBreaks:!1}}function i0(O){if(!s0.test(O))return O;let _=O.replace(a0," ");if(_.charCodeAt(0)===32)_=_.slice(1);if(_.length>0&&_.charCodeAt(_.length-1)===32)_=_.slice(0,-1);return _}function t0(O){if(!/[\r\f]/.test(O))return O.replace(/\r\n/g,"\n");return O.replace(/\r\n/g,"\n").replace(/[\r\f]/g,"\n")}var d=null,V0;function n0(){if(d===null)d=new Intl.Segmenter(V0,{granularity:"word"});return d}function z0(){d=null}function j0(O){let _=O&&O.length>0?O:void 0;if(V0===_)return;V0=_,d=null}var e0=/\p{Script=Arabic}/u,O0=/\p{M}/u,b0=/\p{Nd}/u;function X0(O){return e0.test(O)}function p(O){for(let _ of O){let J=_.codePointAt(0);if(J>=19968&&J<=40959||J>=13312&&J<=19903||J>=131072&&J<=173791||J>=173824&&J<=177983||J>=177984&&J<=178207||J>=178208&&J<=183983||J>=183984&&J<=191471||J>=196608&&J<=201551||J>=63744&&J<=64255||J>=194560&&J<=195103||J>=12288&&J<=12351||J>=12352&&J<=12447||J>=12448&&J<=12543||J>=44032&&J<=55215||J>=65280&&J<=65519)return!0}return!1}var $0=new Set(["\u{FF0C}","\u{FF0E}","\u{FF01}","\u{FF1A}","\u{FF1B}","\u{FF1F}","\u{3001}","\u{3002}","\u{30FB}","\u{FF09}","\u{3015}","\u{3009}","\u{300B}","\u{300D}","\u{300F}","\u{3011}","\u{3017}","\u{3019}","\u{301B}","\u{30FC}","\u{3005}","\u{303B}","\u{309D}","\u{309E}","\u{30FD}","\u{30FE}"]),i=new Set(['"',"(","[","{","\u{201C}","'","\u{AB}","\u{2039}","\u{FF08}","\u{3014}","\u{3008}","\u{300A}","\u{300C}","\u{300E}","\u{3010}","\u{3016}","\u{3018}","\u{301A}"]),Q0=new Set(["\u{2018}","\u{2019}"]),r=new Set([".",",","!","?",":",";","\u{060C}","\u{061B}","\u{061F}","\u{0964}","\u{0965}","\u{1040A}","\u{1040B}","\u{1040C}","\u{1040D}","\u{1040F}",")","]","}","%",'"',"\u{201D}","'","\u{BB}","\u{203A}","\u{2026}"]),OO=new Set([":",".","،","؛"]),_O=new Set(["၏"]),JO=new Set(["\u{201D}","'","\u{BB}","\u{203A}","\u{300D}","\u{300F}","\u{3011}","\u{300B}","\u{3009}","\u{3015}","\u{FF09}"]);
+window.Pretext={prepare:X1,layout:Z1,prepareWithSegments:Y1,walkLineRanges:$1,layoutNextLine:Q1,layoutWithLines:q1,clearCache:aO};
 </script>
+
+<!-- ============ MAIN JS ============ -->
+<script>
+// Nav scroll glass effect
+var nav = document.getElementById('nav');
+var lastScroll = 0;
+window.addEventListener('scroll', function() {
+  var y = window.scrollY;
+  if (y > 60) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+  lastScroll = y;
+}, { passive: true });
+
+// Mobile menu
+var hamburger = document.getElementById('hamburger');
+var drawer = document.getElementById('mobileDrawer');
+var drawerClose = document.getElementById('drawerClose');
+function openDrawer() {
+  hamburger.classList.add('open');
+  drawer.classList.add('open');
+  drawer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  hamburger.classList.remove('open');
+  drawer.classList.remove('open');
+  drawer.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+hamburger.addEventListener('click', function() {
+  if (drawer.classList.contains('open')) closeDrawer(); else openDrawer();
+});
+drawerClose.addEventListener('click', closeDrawer);
+// Close on drawer link click
+drawer.querySelectorAll('.drawer-link').forEach(function(link) {
+  link.addEventListener('click', closeDrawer);
+});
+
+// Reveal on scroll
+var reveals = document.querySelectorAll('.reveal');
+var revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      // Animate bar fills in splits chart
+      var bars = entry.target.querySelectorAll('.bar-fill[data-w]');
+      bars.forEach(function(bar) {
+        bar.style.width = bar.getAttribute('data-w');
+      });
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+reveals.forEach(function(el) { revealObserver.observe(el); });
+
+// Side rail
+var sideRail = document.getElementById('sideRail');
+var sections = document.querySelectorAll('[data-rail]');
+var railItems = document.querySelectorAll('.rail-item');
+
+var railObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      var id = entry.target.dataset.rail;
+      railItems.forEach(function(item) {
+        item.classList.toggle('active', item.dataset.section === id);
+      });
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(function(s) { railObserver.observe(s); });
+
+// Show rail after hero scroll
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 400) {
+    sideRail.classList.add('visible');
+  } else {
+    sideRail.classList.remove('visible');
+  }
+}, { passive: true });
+
+// Pretext: hero headline height (font-load guard)
+if (window.Pretext && window.Pretext.prepare && window.Pretext.layout) {
+  document.fonts.ready.then(function() {
+    var el = document.querySelector('h1.display[data-pretext]');
+    if (!el) return;
+    var font = getComputedStyle(el).font;
+    try {
+      var prepared = window.Pretext.prepare(el.textContent, font);
+      // The layout computes correctly — CSS still controls visual presentation
+      // but this ensures consistent line measurements after custom fonts load
+    } catch(e) {}
+  });
+}
+</script>
+
 </body>
 </html>
