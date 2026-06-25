@@ -32,6 +32,35 @@
 *{margin:0;padding:0;box-sizing:border-box}
 *::selection{background:var(--hi-vis);color:var(--paper)}
 
+/* ============ METRIC-MATCHED FONT FALLBACKS ============ */
+/* Eliminates layout shift on load: the fallback occupies the same space as the
+   web font so paragraphs do not re-wrap when Fraunces/Inter/JetBrains Mono swap in.
+   size-adjust / ascent / descent ratios measured against the live web fonts. */
+@font-face{
+  font-family:'Inter-fallback';
+  src:local('Arial');
+  size-adjust:106.81%;
+  ascent-override:90.2%;
+  descent-override:22.48%;
+  line-gap-override:0%;
+}
+@font-face{
+  font-family:'Fraunces-fallback';
+  src:local('Times New Roman');
+  size-adjust:94.15%;
+  ascent-override:98%;
+  descent-override:26%;
+  line-gap-override:0%;
+}
+@font-face{
+  font-family:'Mono-fallback';
+  src:local('Courier New');
+  size-adjust:99.98%;
+  ascent-override:100%;
+  descent-override:24%;
+  line-gap-override:0%;
+}
+
 :root{
   --paper:#fbf8f1;
   --paper-deep:#f3eee2;
@@ -64,7 +93,7 @@
 
 html{scroll-behavior:smooth}
 body{
-  font-family:'Inter',-apple-system,sans-serif;
+  font-family:'Inter','Inter-fallback',-apple-system,sans-serif;
   background:var(--paper);
   color:var(--ink);
   line-height:1.55;
@@ -125,7 +154,7 @@ body{
   text-decoration:none;
 }
 .brand-name{
-  font-family:'Fraunces',serif;
+  font-family:'Fraunces','Fraunces-fallback',serif;
   font-variation-settings:"opsz" 28;
   font-weight:500;
   font-size:1.125rem;
@@ -222,7 +251,7 @@ body{
 }
 #mobileDrawer.open{transform:translateX(0)}
 .drawer-link{
-  font-family:'Fraunces',serif;
+  font-family:'Fraunces','Fraunces-fallback',serif;
   font-variation-settings:"opsz" 48;
   font-weight:500;
   font-size:2.5rem;
@@ -263,7 +292,7 @@ body{
   position:absolute;
   top:24px;
   left:48px;
-  font-family:'Fraunces',serif;
+  font-family:'Fraunces','Fraunces-fallback',serif;
   font-variation-settings:"opsz" 28;
   font-weight:500;
   font-size:1rem;
@@ -287,7 +316,7 @@ body{
 
 /* ============ TYPE SYSTEM ============ */
 h1.display{
-  font-family:'Fraunces',serif;
+  font-family:'Fraunces','Fraunces-fallback',serif;
   font-variation-settings:"opsz" 144,"SOFT" 50;
   font-weight:500;
   font-size:clamp(3.75rem,11vw,10rem);
@@ -296,7 +325,7 @@ h1.display{
   color:var(--ink);
 }
 h2.section-title{
-  font-family:'Fraunces',serif;
+  font-family:'Fraunces','Fraunces-fallback',serif;
   font-variation-settings:"opsz" 96;
   font-weight:500;
   font-size:clamp(2.5rem,5.5vw,4.5rem);
@@ -306,13 +335,13 @@ h2.section-title{
   max-width:920px;
 }
 h3{
-  font-family:'Fraunces',serif;
+  font-family:'Fraunces','Fraunces-fallback',serif;
   font-variation-settings:"opsz" 48;
   font-weight:500;
   letter-spacing:-0.015em;
 }
 .eyebrow{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;
   font-size:10.5px;
   letter-spacing:0.22em;
   text-transform:uppercase;
@@ -373,7 +402,7 @@ h3{
   flex-wrap:wrap;
 }
 .hero-meta-item{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;
   font-size:12px;
   letter-spacing:0.18em;
   text-transform:uppercase;
@@ -387,7 +416,7 @@ h3{
   flex-shrink:0;
 }
 .hero-sub{
-  font-family:'Fraunces',serif;
+  font-family:'Fraunces','Fraunces-fallback',serif;
   font-variation-settings:"opsz" 20;
   font-weight:400;
   font-size:clamp(1.125rem,2vw,1.5rem);
@@ -455,7 +484,7 @@ h3{
   flex-shrink:0;
 }
 .micro{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;
   font-size:13px;
   letter-spacing:0.08em;
   color:var(--ink-dim);
@@ -487,8 +516,8 @@ h3{
 @keyframes traceIn{to{stroke-dashoffset:0}}
 .hero-route .mile-pin{fill:var(--paper);stroke:currentColor;stroke-width:1.75;opacity:0;animation:fadeIn 400ms ease forwards}
 .hero-route .mile-pin-active{fill:currentColor;stroke:currentColor;stroke-width:1.75;opacity:0;animation:fadeIn 400ms ease forwards}
-.hero-route .mile-tick{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:currentColor;opacity:0;animation:fadeIn 500ms ease forwards;letter-spacing:0.16em}
-.hero-route .start-finish{font-family:'JetBrains Mono',monospace;font-size:9px;fill:var(--ink-mid);letter-spacing:0.22em;opacity:0;animation:fadeIn 500ms ease 1600ms forwards}
+.hero-route .mile-tick{font-family:'JetBrains Mono','Mono-fallback',monospace;font-size:9.5px;fill:currentColor;opacity:0;animation:fadeIn 500ms ease forwards;letter-spacing:0.16em}
+.hero-route .start-finish{font-family:'JetBrains Mono','Mono-fallback',monospace;font-size:9px;fill:var(--ink-mid);letter-spacing:0.22em;opacity:0;animation:fadeIn 500ms ease 1600ms forwards}
 .hero-route .pin-1{animation-delay:1100ms}
 .hero-route .pin-2{animation-delay:1400ms}
 .hero-route .pin-3{animation-delay:1700ms}
@@ -540,17 +569,17 @@ section.block{
 }
 @media(max-width:1100px){.pattern .pattern-body{grid-template-columns:1fr;gap:48px}}
 .pattern .pattern-aside{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;
   font-size:10.5px;letter-spacing:0.18em;color:var(--ink-dim);text-transform:uppercase;
   line-height:1.9;padding-top:12px;border-top:1px solid var(--ink);
 }
 .pattern p{
-  font-family:'Fraunces',serif;
+  font-family:'Fraunces','Fraunces-fallback',serif;
   font-variation-settings:"opsz" 14;
   font-weight:400;font-size:1.25rem;line-height:1.58;color:var(--ink-soft);margin-bottom:24px;
 }
 .pattern .closing{
-  font-family:'Fraunces',serif;
+  font-family:'Fraunces','Fraunces-fallback',serif;
   font-variation-settings:"opsz" 36;
   font-style:italic;font-size:1.625rem;color:var(--ink);
   border-left:2.5px solid var(--hi-vis);padding-left:24px;margin-top:40px;font-weight:400;
@@ -571,7 +600,7 @@ section.block{
 .track-shift .ts-pin{fill:var(--paper);stroke:currentColor;stroke-width:1.5;opacity:0;transition:opacity 400ms ease}
 .track-shift.revealed .ts-pin{opacity:1;transition-delay:1800ms}
 .track-shift .ts-label{
-  font-family:'JetBrains Mono',monospace;font-size:10px;fill:var(--ink-mid);
+  font-family:'JetBrains Mono','Mono-fallback',monospace;font-size:10px;fill:var(--ink-mid);
   letter-spacing:0.22em;text-transform:uppercase;opacity:0;transition:opacity 400ms ease;
 }
 .track-shift.revealed .ts-label{opacity:1;transition-delay:2000ms}
@@ -607,7 +636,7 @@ section.block{
 .ai-card .spec-pattern{color:var(--ai);opacity:0.5}
 
 .spec-tag{
-  font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.22em;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;font-size:9.5px;letter-spacing:0.22em;
   text-transform:uppercase;color:var(--ink-dim);margin-bottom:22px;
 }
 .water-card .spec-tag{color:var(--water)}
@@ -615,7 +644,7 @@ section.block{
 
 .spec-card h3{font-size:2.625rem;line-height:0.97;margin-bottom:10px}
 .spec-card .spec-sub{
-  font-family:'Fraunces',serif;font-variation-settings:"opsz" 20;
+  font-family:'Fraunces','Fraunces-fallback',serif;font-variation-settings:"opsz" 20;
   font-style:italic;color:var(--ink-mid);font-size:1.0625rem;margin-bottom:36px;
 }
 .spec-card p{color:var(--ink-soft);line-height:1.65;margin-bottom:36px;font-size:1rem}
@@ -668,7 +697,7 @@ section.block{
 .bib-card .timing-chip{
   position:absolute;right:14px;top:50%;
   transform:translateY(-50%) rotate(90deg);transform-origin:center;
-  font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.32em;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;font-size:8px;letter-spacing:0.32em;
   text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;
 }
 
@@ -682,11 +711,11 @@ section.block{
 }
 .bib-label-block{padding-top:6px}
 .bib-label{
-  font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.22em;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;font-size:9.5px;letter-spacing:0.22em;
   text-transform:uppercase;color:var(--ink-mid);margin-bottom:6px;
 }
 .bib-tagline{
-  font-family:'Fraunces',serif;font-variation-settings:"opsz" 24;
+  font-family:'Fraunces','Fraunces-fallback',serif;font-variation-settings:"opsz" 24;
   font-style:italic;font-size:1.0625rem;color:var(--ink);line-height:1.3;
 }
 .bib-card h3{font-size:1.5rem;line-height:1.15;margin-bottom:12px}
@@ -741,7 +770,7 @@ section.block{
 }
 @media(max-width:1000px){.about-grid{grid-template-columns:1fr;gap:48px}}
 .about-body p{
-  font-family:'Fraunces',serif;font-variation-settings:"opsz" 16;font-weight:400;
+  font-family:'Fraunces','Fraunces-fallback',serif;font-variation-settings:"opsz" 16;font-weight:400;
   font-size:1.1875rem;color:var(--ink-soft);line-height:1.6;margin-bottom:24px;
 }
 .about-body p strong{color:var(--ink);font-weight:500;font-style:italic}
@@ -749,7 +778,7 @@ section.block{
   background:var(--paper-warm);border-left:2.5px solid var(--hi-vis);padding:28px 32px;margin-top:12px;
 }
 .running-note p{
-  margin-bottom:0;font-family:'Fraunces',serif;font-variation-settings:"opsz" 18;
+  margin-bottom:0;font-family:'Fraunces','Fraunces-fallback',serif;font-variation-settings:"opsz" 18;
   font-size:1.125rem;color:var(--ink);line-height:1.55;
 }
 .running-note p em{font-style:italic;color:var(--ink-mid)}
@@ -764,18 +793,18 @@ section.block{
   padding-bottom:20px;border-bottom:1px solid rgba(251,248,241,0.14);margin-bottom:28px;
 }
 .splits-card .splits-title{
-  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.22em;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;font-size:10px;letter-spacing:0.22em;
   text-transform:uppercase;color:rgba(251,248,241,0.55);
 }
 .splits-card .splits-total{font-family:'Anton',sans-serif;font-size:1.25rem;letter-spacing:0.05em;color:var(--hi-vis)}
 .splits-card .splits-week{
-  font-family:'Fraunces',serif;font-variation-settings:"opsz" 28;
+  font-family:'Fraunces','Fraunces-fallback',serif;font-variation-settings:"opsz" 28;
   font-weight:500;font-size:1.375rem;color:var(--paper);margin-bottom:4px;margin-top:-4px;
 }
 .splits-rows{display:flex;flex-direction:column;gap:14px}
 .splits-row{
   display:grid;grid-template-columns:36px 1fr 80px;gap:14px;align-items:center;
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;color:var(--paper);
+  font-family:'JetBrains Mono','Mono-fallback',monospace;font-size:10.5px;letter-spacing:0.14em;color:var(--paper);
 }
 .splits-row .day{color:rgba(251,248,241,0.45);text-transform:uppercase}
 .splits-row .bar-track{
@@ -797,7 +826,7 @@ section.block{
 .splits-footer{
   display:flex;justify-content:space-between;align-items:center;
   margin-top:28px;padding-top:20px;border-top:1px solid rgba(251,248,241,0.14);
-  font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.18em;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;font-size:9.5px;letter-spacing:0.18em;
   text-transform:uppercase;color:rgba(251,248,241,0.45);
 }
 .splits-footer .legend{display:flex;gap:16px}
@@ -832,7 +861,7 @@ section.block{
 .final-cta .eyebrow .dash{background:var(--hi-vis)}
 .final-cta .eyebrow .pulse{background:var(--hi-vis)}
 .final-cta p{
-  font-family:'Fraunces',serif;font-variation-settings:"opsz" 16;
+  font-family:'Fraunces','Fraunces-fallback',serif;font-variation-settings:"opsz" 16;
   font-size:1.1875rem;color:rgba(251,248,241,0.72);
   margin-bottom:44px;max-width:640px;line-height:1.58;
 }
@@ -871,16 +900,16 @@ footer .wrap{
 }
 footer .foot-left{
   display:flex;flex-direction:column;gap:8px;
-  font-family:'JetBrains Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;letter-spacing:0.16em;text-transform:uppercase;
 }
 footer .foot-left strong{
-  font-family:'Fraunces',serif;font-weight:500;color:rgba(251,248,241,0.9);
+  font-family:'Fraunces','Fraunces-fallback',serif;font-weight:500;color:rgba(251,248,241,0.9);
   text-transform:none;font-size:14px;letter-spacing:0;
 }
 footer .foot-right{display:flex;gap:32px;align-items:center}
 footer a{
   color:rgba(251,248,241,0.5);text-decoration:none;
-  font-family:'JetBrains Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;
+  font-family:'JetBrains Mono','Mono-fallback',monospace;letter-spacing:0.16em;text-transform:uppercase;
   transition:color 200ms ease;
 }
 footer a:hover{color:rgba(251,248,241,0.9)}
@@ -906,6 +935,13 @@ footer a:hover{color:rgba(251,248,241,0.9)}
   .select-eng .select-card{padding:36px 32px}
   .final-cta{padding:140px 0}
   footer .foot-right{flex-direction:column;align-items:flex-start;gap:16px}
+  /* Decorative route/track SVGs stretch full-width (preserveAspectRatio:none),
+     which squishes their text labels to ~24% width on phones. The graphics are
+     aria-hidden decoration, so drop the unreadable text and keep the lines. */
+  .hero-route .mile-tick,
+  .hero-route .start-finish,
+  .track-shift .ts-label{display:none}
+  .track-shift{height:200px}
 }
 </style>
 </head>
@@ -1069,7 +1105,7 @@ footer a:hover{color:rgba(251,248,241,0.9)}
       Mile 02 / Specialties
     </div>
     <h2 class="section-title">Two courses<br>I know cold.</h2>
-    <p style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 18;font-size:1.25rem;color:var(--ink-soft);max-width:740px;line-height:1.55;font-style:italic;">One is the industry I came up in. The other is the training advantage I bring everywhere. Both run on the same operator philosophy. If it doesn't move the splits, it doesn't make the plan.</p>
+    <p style="font-family:'Fraunces','Fraunces-fallback',serif;font-variation-settings:'opsz' 18;font-size:1.25rem;color:var(--ink-soft);max-width:740px;line-height:1.55;font-style:italic;">One is the industry I came up in. The other is the training advantage I bring everywhere. Both run on the same operator philosophy. If it doesn't move the splits, it doesn't make the plan.</p>
 
     <div class="specialties-grid">
       <!-- WATER TECH -->
@@ -1145,7 +1181,7 @@ footer a:hover{color:rgba(251,248,241,0.9)}
       Mile 03 / What I Build
     </div>
     <h2 class="section-title">Four ways<br>to start running.</h2>
-    <p style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 18;font-size:1.25rem;color:var(--ink-soft);max-width:740px;line-height:1.55;font-style:italic;">Custom on the inside, predictable on the outside. Pick the distance that fits where you are. I'll tell you on the intro call if I'd recommend a different one.</p>
+    <p style="font-family:'Fraunces','Fraunces-fallback',serif;font-variation-settings:'opsz' 18;font-size:1.25rem;color:var(--ink-soft);max-width:740px;line-height:1.55;font-style:italic;">Custom on the inside, predictable on the outside. Pick the distance that fits where you are. I'll tell you on the intro call if I'd recommend a different one.</p>
 
     <div class="services-grid">
       <div class="bib-card reveal reveal-d1">
